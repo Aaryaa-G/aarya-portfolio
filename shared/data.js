@@ -13,7 +13,7 @@ const data = {
   },
   links: { linkedin: "[URL]", github: "[URL]" },
   tickerItems: [
-    "CQ CQ CQ, THIS IS AARYA",
+    "CQ CQ CQ, THIS IS AARYA GOJARE, CALLING ALL STATIONS",
     "FIRMWARE FOR THE FINAL FRONTIER",
     "PACKETS IN, CHAOS OUT",
     "TALKING TO SATELLITES, SOMETIMES THEY ANSWER",
