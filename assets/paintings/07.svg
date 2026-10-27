@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="bg_07" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3022" />
+      <stop offset="50%" stop-color="#3D7049" />
+      <stop offset="100%" stop-color="#B6D59F" />
+    </linearGradient>
+    <radialGradient id="rad_07" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#FFC49B" stop-opacity="0.85" />
+      <stop offset="60%" stop-color="#B6D59F" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#3D7049" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg_07)" />
+  <circle cx="300.0" cy="360.0" r="228.0" fill="url(#rad_07)" />
+  
+  <g opacity="0.65">
+    <path d="M0,480.0 Q150.0,320.0 300.0,440.00000000000006 T600,400.0 L600,800 L0,800 Z" fill="#1B3022" opacity="0.7" />
+    <path d="M0,560.0 Q180.0,496.0 360.0,600.0 T600,520.0 L600,800 L0,800 Z" fill="#3D7049" opacity="0.8" />
+    <circle cx="450.0" cy="224.00000000000003" r="84.00000000000001" fill="#FFC49B" opacity="0.75" />
+    <circle cx="168.00000000000003" cy="280.0" r="48.0" fill="#B6D59F" opacity="0.5" />
+    <!-- Artistic brush gestures -->
+    <path d="M60.0,200.0 C210.0,120.0 390.0,280.0 540.0,160.0" stroke="#FFC49B" stroke-width="6" fill="none" opacity="0.4" stroke-linecap="round" />
+    <path d="M90.0,640.0 C240.0,560.0 360.0,680.0 510.0,624.0" stroke="#B6D59F" stroke-width="4" fill="none" opacity="0.5" stroke-linecap="round" />
+  </g>
+  
+  <rect x="20" y="20" width="560" height="760" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="6 6" />
+  <circle cx="570" cy="30" r="3.5" fill="#ffffff" opacity="0.8" />
+  <circle cx="30" cy="30" r="3.5" fill="#ffffff" opacity="0.8" />
+  
+  <g transform="translate(28, 742)">
+    <rect width="544" height="36" rx="4" fill="rgba(15, 8, 20, 0.75)" />
+    <text x="14" y="22" font-family="'Playfair Display', Georgia, serif" font-weight="bold" font-size="13" fill="#ffffff" letter-spacing="1.2">THE LONG WAY HOME</text>
+    <text x="530" y="22" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#FFC2E2">ACRYLIC & PASTEL</text>
+  </g>
+</svg>

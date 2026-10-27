@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750">
+  <defs>
+    <linearGradient id="bg_10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12072B" />
+      <stop offset="50%" stop-color="#9B5DE5" />
+      <stop offset="100%" stop-color="#FF6FAE" />
+    </linearGradient>
+    <radialGradient id="rad_10" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#FFE5F1" stop-opacity="0.85" />
+      <stop offset="60%" stop-color="#FF6FAE" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#9B5DE5" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg_10)" />
+  <circle cx="300.0" cy="337.5" r="228.0" fill="url(#rad_10)" />
+  
+  <g opacity="0.65">
+    <path d="M0,450.0 Q150.0,300.0 300.0,412.50000000000006 T600,375.0 L600,750 L0,750 Z" fill="#12072B" opacity="0.7" />
+    <path d="M0,525.0 Q180.0,465.0 360.0,562.5 T600,487.5 L600,750 L0,750 Z" fill="#9B5DE5" opacity="0.8" />
+    <circle cx="450.0" cy="210.00000000000003" r="84.00000000000001" fill="#FFE5F1" opacity="0.75" />
+    <circle cx="168.00000000000003" cy="262.5" r="48.0" fill="#FF6FAE" opacity="0.5" />
+    <!-- Artistic brush gestures -->
+    <path d="M60.0,187.5 C210.0,112.5 390.0,262.5 540.0,150.0" stroke="#FFE5F1" stroke-width="6" fill="none" opacity="0.4" stroke-linecap="round" />
+    <path d="M90.0,600.0 C240.0,525.0 360.0,637.5 510.0,585.0" stroke="#FF6FAE" stroke-width="4" fill="none" opacity="0.5" stroke-linecap="round" />
+  </g>
+  
+  <rect x="20" y="20" width="560" height="710" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="6 6" />
+  <circle cx="570" cy="30" r="3.5" fill="#ffffff" opacity="0.8" />
+  <circle cx="30" cy="30" r="3.5" fill="#ffffff" opacity="0.8" />
+  
+  <g transform="translate(28, 692)">
+    <rect width="544" height="36" rx="4" fill="rgba(15, 8, 20, 0.75)" />
+    <text x="14" y="22" font-family="'Playfair Display', Georgia, serif" font-weight="bold" font-size="13" fill="#ffffff" letter-spacing="1.2">COSMIC STATIC & RADIO</text>
+    <text x="530" y="22" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#FFC2E2">SSTV GLITCH ART</text>
+  </g>
+</svg>

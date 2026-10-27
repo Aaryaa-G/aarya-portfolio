@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg_02" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D1D5A" />
+      <stop offset="50%" stop-color="#6B2D8B" />
+      <stop offset="100%" stop-color="#FFC2E2" />
+    </linearGradient>
+    <radialGradient id="rad_02" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#FFE3F4" stop-opacity="0.85" />
+      <stop offset="60%" stop-color="#FFC2E2" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#6B2D8B" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg_02)" />
+  <circle cx="400.0" cy="225.0" r="190.0" fill="url(#rad_02)" />
+  
+  <g opacity="0.65">
+    <path d="M0,300.0 Q200.0,200.0 400.0,275.0 T800,250.0 L800,500 L0,500 Z" fill="#3D1D5A" opacity="0.7" />
+    <path d="M0,350.0 Q240.0,310.0 480.0,375.0 T800,325.0 L800,500 L0,500 Z" fill="#6B2D8B" opacity="0.8" />
+    <circle cx="600.0" cy="140.0" r="70.0" fill="#FFE3F4" opacity="0.75" />
+    <circle cx="224.00000000000003" cy="175.0" r="40.0" fill="#FFC2E2" opacity="0.5" />
+    <!-- Artistic brush gestures -->
+    <path d="M80.0,125.0 C280.0,75.0 520.0,175.0 720.0,100.0" stroke="#FFE3F4" stroke-width="6" fill="none" opacity="0.4" stroke-linecap="round" />
+    <path d="M120.0,400.0 C320.0,350.0 480.0,425.0 680.0,390.0" stroke="#FFC2E2" stroke-width="4" fill="none" opacity="0.5" stroke-linecap="round" />
+  </g>
+  
+  <rect x="20" y="20" width="760" height="460" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="6 6" />
+  <circle cx="770" cy="30" r="3.5" fill="#ffffff" opacity="0.8" />
+  <circle cx="30" cy="30" r="3.5" fill="#ffffff" opacity="0.8" />
+  
+  <g transform="translate(28, 442)">
+    <rect width="744" height="36" rx="4" fill="rgba(15, 8, 20, 0.75)" />
+    <text x="14" y="22" font-family="'Playfair Display', Georgia, serif" font-weight="bold" font-size="13" fill="#ffffff" letter-spacing="1.2">LAVENDER ORBIT</text>
+    <text x="730" y="22" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#FFC2E2">GOUACHE ON PAPER</text>
+  </g>
+</svg>

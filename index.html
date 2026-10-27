@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>aarya portfolio</title>
+  <meta name="description"
+    content="Portfolio of Aarya Gojare — Computer Engineering student in Mumbai building satellite firmware, embedded avionics, AI for space, and visual creative explorations.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=JetBrains+Mono:wght@400;700&family=Caveat:wght@600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFF3FA;
+      --tx: #1E1347;
+      --card: #fff;
+      --ln: #1E1347;
+      --sh: #FF6FAE;
+      --soft: #FFC2E2;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      --cur-default: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2724%27%20height%3D%2724%27%20viewBox%3D%270%200%2024%2024%27%3E%20%3Cpolygon%20points%3D%2712.0%2C2.0%2014.7%2C8.8%2022.0%2C9.3%2016.4%2C13.9%2018.2%2C21.0%2012.0%2C17.1%205.8%2C21.0%207.6%2C13.9%202.0%2C9.3%209.3%2C8.8%27%20fill%3D%27%23ffffff%27%20stroke%3D%27%231E1347%27%20stroke-width%3D%271.8%27%20stroke-linejoin%3D%27round%27/%3E%20%3Ccircle%20cx%3D%2712%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23FF2A85%27/%3E%20%3C/svg%3E") 12 2, auto;
+      --cur-pointer: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2724%27%20height%3D%2724%27%20viewBox%3D%270%200%2024%2024%27%3E%20%3Cpolygon%20points%3D%2712.0%2C2.0%2014.7%2C8.8%2022.0%2C9.3%2016.4%2C13.9%2018.2%2C21.0%2012.0%2C17.1%205.8%2C21.0%207.6%2C13.9%202.0%2C9.3%209.3%2C8.8%27%20fill%3D%27%23ffffff%27%20stroke%3D%27%23FF2A85%27%20stroke-width%3D%271.8%27%20stroke-linejoin%3D%27round%27/%3E%20%3Ccircle%20cx%3D%2712%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%239B5DE5%27/%3E%20%3C/svg%3E") 12 2, pointer
+    }
+
+    ::selection {
+      background: #FF2A85;
+      color: #FFF3FA
+    }
+
+    ::-moz-selection {
+      background: #FF2A85;
+      color: #FFF3FA
+    }
+
+    html,
+    body,
+    div,
+    span,
+    p,
+    h1,
+    h2,
+    h3,
+    header,
+    footer,
+    section,
+    article,
+    figure,
+    nav {
+      cursor: var(--cur-default)
+    }
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"],
+    select,
+    summary,
+    .ag-photo-pin,
+    .st,
+    [role="button"],
+    #skp,
+    .btn {
+      cursor: var(--cur-pointer)
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      cursor: text
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 70px;
+      background: var(--bg)
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--tx);
+      font: 15px/1.6 'JetBrains Mono', ui-monospace, Menlo, monospace
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Bricolage Grotesque', 'Arial Black', Impact, sans-serif;
+      line-height: 1;
+      margin: 0
+    }
+
+    a {
+      color: inherit
+    }
+
+    :focus-visible {
+      outline: 3px solid #FF6FAE;
+      outline-offset: 3px
+    }
+
+    /* opening */
+    #op {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: #120a24;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      transition: opacity .8s, transform .8s;
+      color: #FFC2E2
+    }
+
+    #op.out {
+      opacity: 0;
+      transform: scale(1.06);
+      pointer-events: none
+    }
+
+    #op .fr {
+      border: 3px solid #FF6FAE;
+      box-shadow: 6px 6px 0 #9B5DE5;
+      padding: 10px;
+      background: #1E1347;
+      width: min(92vw, 640px)
+    }
+
+    #sstv {
+      width: 100%;
+      display: block;
+      image-rendering: pixelated;
+      background: #120a24;
+      aspect-ratio: 4/3
+    }
+
+    #op small,
+    #pg {
+      display: block;
+      font-size: 12px;
+      margin: 4px 0
+    }
+
+    #skp {
+      font: inherit;
+      background: #FF6FAE;
+      color: #1E1347;
+      border: 3px solid #FFC2E2;
+      padding: 6px 16px;
+      cursor: pointer;
+      font-weight: 700
+    }
+
+    /* nav */
+    nav {
+      position: sticky;
+      top: env(safe-area-inset-top, 0px);
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 20px;
+      background: var(--bg);
+      border-bottom: 3px solid var(--ln);
+      flex-wrap: wrap
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .nav-brand {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 19px;
+      letter-spacing: -.01em;
+      text-decoration: none;
+      color: var(--tx)
+    }
+
+    .nav-brand:hover {
+      color: #FF6FAE
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700
+    }
+
+    .nav-links a:hover {
+      color: #FF6FAE
+    }
+
+    .ft-links {
+      margin-bottom: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 12.5px;
+      font-weight: 700
+    }
+
+    .ft-links a {
+      text-decoration: none
+    }
+
+    .ft-links a:hover {
+      color: #FF6FAE
+    }
+
+    .ft-links .dot {
+      opacity: .5
+    }
+
+    /* layout */
+    .s {
+      max-width: 1100px;
+      margin: auto;
+      padding: 64px 20px
+    }
+
+    h2 {
+      font-size: clamp(32px, 6vw, 56px);
+      text-transform: uppercase;
+      margin-bottom: 8px
+    }
+
+    h2 em {
+      font-style: normal;
+      color: #FF6FAE
+    }
+
+    .sub {
+      font-family: 'Caveat', cursive;
+      font-size: 20px;
+      margin: 0 0 28px
+    }
+
+    .c {
+      background: var(--card);
+      border: 3px solid var(--ln);
+      box-shadow: 6px 6px 0 var(--sh);
+      padding: 18px
+    }
+
+    .ch {
+      display: inline-block;
+      border: 2px solid var(--ln);
+      border-radius: 99px;
+      padding: 0 9px;
+      font-size: 12px;
+      background: var(--soft);
+      margin: 2px
+    }
+
+    [hidden] {
+      display: none !important
+    }
+
+    .btn {
+      display: inline-block;
+      border: 3px solid var(--ln);
+      padding: 8px 18px;
+      font: 700 14px inherit;
+      font-family: inherit;
+      text-decoration: none;
+      box-shadow: 4px 4px 0 var(--sh);
+      background: var(--card);
+      cursor: pointer;
+      color: var(--tx)
+    }
+
+    .btn.f {
+      background: #1E1347;
+      color: #FFF3FA;
+      border-color: #1E1347
+    }
+
+    .btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--sh)
+    }
+
+    /* hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 30px;
+      align-items: center;
+      min-height: 78vh
+    }
+
+    .tag {
+      display: inline-block;
+      background: #FF6FAE;
+      color: #1E1347;
+      border: 3px solid var(--ln);
+      padding: 2px 12px;
+      font-weight: 700;
+      transform: rotate(-2deg);
+      margin-bottom: 14px
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 11vw, 120px);
+      text-transform: uppercase;
+      letter-spacing: -.03em;
+      outline: none
+    }
+
+    .hero h1 span {
+      color: #FF6FAE;
+      display: block
+    }
+
+    mark {
+      background: linear-gradient(transparent 15%, #FF2A85 15%);
+      color: inherit;
+      padding: 1px 5px;
+      font-weight: 700;
+      border-radius: 2px
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      width: 100%;
+      max-width: 340px
+    }
+
+    .hero-cutout {
+      width: 100%;
+      max-width: 310px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(6px 8px 0 var(--sh));
+      transition: transform .3s ease, filter .3s ease;
+      user-select: none
+    }
+
+    .hero-cutout:hover {
+      transform: scale(1.03) rotate(-1deg);
+      filter: drop-shadow(8px 12px 0 var(--sh))
+    }
+
+    .hero-photo-badge {
+      position: absolute;
+      bottom: -10px;
+      background: #1E1347;
+      color: #FFC2E2;
+      border: 2.5px solid var(--ln);
+      box-shadow: 3px 3px 0 var(--sh);
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      border-radius: 99px;
+      z-index: 2;
+      white-space: nowrap
+    }
+
+    .live .rv {
+      animation: up .7s both
+    }
+
+    .live .rv:nth-child(2) {
+      animation-delay: .12s
+    }
+
+    .live .rv:nth-child(3) {
+      animation-delay: .24s
+    }
+
+    .live .rv:nth-child(4) {
+      animation-delay: .36s
+    }
+
+    @keyframes up {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+    }
+
+    /* ticker */
+    .tk {
+      overflow: hidden;
+      background: #1E1347;
+      color: #FFC2E2;
+      border-block: 3px solid var(--ln);
+      white-space: nowrap
+    }
+
+    .tk div {
+      display: inline-block;
+      padding: 11px 0;
+      font-weight: 700;
+      animation: mq 80s linear infinite
+    }
+
+    .tk:hover div {
+      animation-play-state: paused
+    }
+
+    @keyframes mq {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* grids */
+    .g3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 26px
+    }
+
+    .g3 .c:nth-child(odd) {
+      transform: rotate(-.6deg)
+    }
+
+    .g3 .c:nth-child(even) {
+      transform: rotate(.6deg)
+    }
+
+    .pj h3 {
+      font-size: 22px;
+      margin: 8px 0
+    }
+
+    .pj p {
+      margin: 0 0 8px;
+      font-size: 13.5px
+    }
+
+    .pj .btn {
+      margin-top: 8px;
+      padding: 4px 14px;
+      font-size: 12px
+    }
+
+    .st2 {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      background: #FFC49B;
+      color: #1E1347;
+      border: 2px solid #1E1347;
+      padding: 0 8px
+    }
+
+    .st2.o {
+      background: #FF6FAE
+    }
+
+    .bento {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.45fr;
+      gap: 22px
+    }
+
+    .bento .w2 {
+      grid-column: span 2
+    }
+
+    .bento h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase
+    }
+
+    .bento p {
+      font-size: 13.5px;
+      line-height: 1.55
+    }
+
+    .bento li {
+      font-size: 13.5px;
+      line-height: 1.45;
+      margin-bottom: 8px
+    }
+
+    .bento li:last-child {
+      margin-bottom: 0
+    }
+
+    .bento ul {
+      padding-left: 18px;
+      margin: 0
+    }
+
+    .sk b {
+      display: block;
+      font-size: 12px;
+      margin-top: 8px
+    }
+
+    /* sky */
+    .sky {
+      position: relative;
+      background: linear-gradient(#1E1347, #4B2A86 55%, #7B4FC0);
+      color: #FFD6F0;
+      border-block: 3px solid var(--ln)
+    }
+
+    .sky h2 em {
+      color: #FFC2E2
+    }
+
+    .sky .sub {
+      color: #FFC2E2
+    }
+
+    .wrap {
+      overflow-x: auto;
+      padding-bottom: 6px
+    }
+
+    .wrap svg {
+      min-width: 760px;
+      width: 100%;
+      height: auto;
+      display: block
+    }
+
+    .sk2 text {
+      fill: #FFD6F0;
+      font: 17px 'JetBrains Mono', monospace
+    }
+
+    .sk2 .dt {
+      fill: #FFC49B;
+      opacity: 0;
+      transition: opacity .2s
+    }
+
+    .st:hover .dt,
+    .st:focus .dt {
+      opacity: 1
+    }
+
+    .st {
+      cursor: pointer;
+      outline: none
+    }
+
+    .st:focus .gl {
+      stroke: #fff;
+      stroke-width: 2
+    }
+
+    .ln {
+      fill: none;
+      stroke: #FFD6F0;
+      stroke-width: 2;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      filter: drop-shadow(0 0 4px #FF6FAE)
+    }
+
+    .in .ln {
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 2.6s ease
+    }
+
+    .ln.d {
+      stroke-dasharray: .02 .02;
+      stroke-dashoffset: 0;
+      opacity: 0
+    }
+
+    .in .ln.d {
+      opacity: .7;
+      transition: opacity 1s 2.4s
+    }
+
+    .tw {
+      animation: tw 3s infinite
+    }
+
+    @keyframes tw {
+      50% {
+        opacity: .25
+      }
+    }
+
+    .pu {
+      animation: pu 2.4s infinite;
+      transform-box: fill-box;
+      transform-origin: center
+    }
+
+    @keyframes pu {
+      50% {
+        transform: scale(1.35)
+      }
+    }
+
+    /* contact */
+    .win {
+      border: 3px solid var(--ln);
+      box-shadow: 6px 6px 0 var(--sh);
+      background: var(--card);
+      max-width: 760px;
+      margin: auto;
+      transform: rotate(-.6deg)
+    }
+
+    .win>header {
+      background: #FF6FAE;
+      color: #1E1347;
+      padding: 6px 12px;
+      font-weight: 700;
+      border-bottom: 3px solid var(--ln)
+    }
+
+    .win form {
+      padding: 18px;
+      display: grid;
+      gap: 12px
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 700
+    }
+
+    label span {
+      font-family: 'Caveat', cursive;
+      font-size: 17px;
+      font-weight: 600;
+      color: #FF6FAE
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      font: inherit;
+      color: var(--tx);
+      background: var(--bg);
+      border: 3px solid var(--ln);
+      padding: 8px
+    }
+
+    #tp {
+      background: #FFF3FA;
+      color: #1E1347;
+      border-block: 2px dashed #1E1347;
+      min-height: 58px;
+      padding: 6px;
+      overflow-x: auto;
+      white-space: nowrap
+    }
+
+    .lt {
+      display: inline-block;
+      margin: 0 8px;
+      text-align: center
+    }
+
+    .lt u {
+      display: block;
+      font-size: 11px;
+      text-decoration: none
+    }
+
+    .sp {
+      display: inline-block;
+      width: 18px
+    }
+
+    .d {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #1E1347;
+      margin: 0 2px
+    }
+
+    .d.h {
+      width: 22px;
+      border-radius: 5px
+    }
+
+    .lt.on .d {
+      background: #FF6FAE
+    }
+
+    .lt.on u {
+      color: #FF6FAE;
+      font-weight: 700
+    }
+
+    #bc {
+      font-size: 26px;
+      color: #9B5DE5;
+      transition: .05s
+    }
+
+    #bc.on {
+      color: #FF6FAE;
+      text-shadow: 0 0 12px #FF6FAE
+    }
+
+    #stt2 {
+      font-size: 13px;
+      font-weight: 700
+    }
+
+    /* journey snapshots */
+    #journey {
+      position: relative;
+    }
+
+    .journey-board {
+      background: #8870A2;
+      border: 3px solid var(--ln);
+      box-shadow: 8px 10px 0 var(--sh);
+      padding: 26px 18px 32px;
+      border-radius: 4px;
+      margin-top: 14px;
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 22px 16px;
+      align-items: stretch;
+    }
+
+    .journey-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ffffff;
+      border: 2.5px solid var(--ln);
+      box-shadow: 6px 8px 0 var(--sh);
+      padding: 8px 8px 12px;
+      border-radius: 2px;
+      cursor: var(--cur-pointer);
+      transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), box-shadow .3s ease;
+      user-select: none;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .journey-card:hover,
+    .journey-card:focus-visible {
+      transform: scale(1.08) rotate(0deg) !important;
+      box-shadow: 10px 14px 0 var(--sh);
+      z-index: 20;
+      outline: none;
+    }
+
+    .journey-card-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      display: block;
+      border: 1.5px solid var(--ln);
+      background: var(--soft);
+    }
+
+    .journey-card-caption {
+      margin-top: 8px;
+      font-family: 'Caveat', cursive;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1E1347;
+      text-align: center;
+      line-height: 1.2;
+      padding: 0 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    @media(max-width: 1024px) {
+      .journey-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px 14px;
+      }
+    }
+
+    @media(max-width: 640px) {
+      .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+      }
+
+      .journey-board {
+        padding: 18px 12px 26px;
+      }
+    }
+
+    @media(max-width: 380px) {
+      .journey-grid {
+        grid-template-columns: 1fr;
+        max-width: 260px;
+        margin: auto;
+      }
+    }
+
+    footer {
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 13px;
+      border-top: 3px solid var(--ln)
+    }
+
+    @media(max-width:960px) {
+      nav {
+        gap: 10px;
+        padding: 8px 14px
+      }
+    }
+
+    @media(max-width:760px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: 0
+      }
+
+      .bento {
+        grid-template-columns: 1fr
+      }
+
+      .bento .w2 {
+        grid-column: auto
+      }
+
+      .nav-links {
+        gap: 10px
+      }
+
+      .nav-links a {
+        font-size: 12px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important;
+        transition: none !important
+      }
+
+      .ln {
+        stroke-dashoffset: 0
+      }
+
+      .ln.d {
+        opacity: .7
+      }
+    }
+  </style>
+</head>
+
+<body style="overflow:hidden">
+  <div id="op" role="dialog" aria-label="Signal decoding opening">
+    <div class="fr"><small id="stt">RX · 437.2480 MHz · SIGNAL LOCKED</small><canvas id="sstv" width="320" height="240"
+        aria-hidden="true"></canvas><small id="pg">RECEIVING… 0%</small></div>
+    <button id="skp" autofocus>Skip ▸</button>
+  </div>
+
+  <div id="mn" inert>
+    <nav>
+      <div class="nav-left">
+        <a href="#hero" class="nav-brand"><b>aarya gojare</b></a>
+      </div>
+      <div class="nav-links">
+        <a href="#work">missions</a>
+        <a href="#about">about</a>
+        <a href="#orbit">orbit</a>
+        <a href="#journey">my journey</a>
+        <a href="#contact">contact</a>
+      </div>
+    </nav>
+
+    <section class="s hero" id="hero">
+      <div>
+        <span class="tag rv">CQ CQ CQ, THIS IS AARYA</span>
+        <h1 tabindex="-1" class="rv">Aarya <span>Gojare</span></h1>
+        <p class="rv">Computer Engineering student in Mumbai writing <mark>satellite firmware</mark> and building
+          <mark>AI for space</mark>. I make small machines that talk to the sky.
+        </p>
+        <p class="rv"><a class="btn f" href="#work">See my missions</a> <a class="btn" href="#journey">My journey</a> <a
+            class="btn" href="#contact">Hire me</a></p>
+      </div>
+      <div class="hero-photo-wrap rv">
+        <img src="assets/aarya-cutout.png" alt="Aarya Gojare" class="hero-cutout">
+        <div class="hero-photo-badge">Starlight to bytes</div>
+      </div>
+    </section>
+
+    <div class="tk" aria-hidden="true">
+      <div id="tk"></div>
+    </div>
+
+    <section class="s" id="work">
+      <h2>My <em>missions</em></h2>
+      <p class="sub">// built, flown and still debugging</p>
+      <div class="g3" id="pj"></div>
+    </section>
+
+    <section class="s" id="about">
+      <h2>About the <em>engineer</em></h2>
+      <p class="sub">// payload bay</p>
+      <div class="bento">
+        <div class="c w2">
+          <h3>Summary</h3>
+          <p>Computer Engineering undergraduate at K. J. Somaiya Institute of Technology with a lifelong passion for
+            space and curious eyes always looking beyond the sky. Happiest when there’s a satellite board on the bench,
+            an oscilloscope running, and a signal finally talking back. I build embedded firmware (C/C++ on STM32,
+            ATmega328P, ARM Cortex-M) for satellite payloads and telemetry, and I’m growing into system integration, AI
+            and IoT.</p>
+        </div>
+        <div class="c">
+          <h3>Education</h3>
+          <ul>
+            <li><b>B.Tech Computer Engineering</b>, KJSIT, Sion. CGPA 8.80, expected Jun 2027</li>
+            <li>HSC, 74.67%, 2023</li>
+            <li>SSC, 94.80%, 2021</li>
+          </ul>
+        </div>
+        <div class="c w2 sk" id="sk">
+          <h3>Skills</h3>
+        </div>
+        <div class="c">
+          <h3>Achievements</h3>
+          <ul>
+            <li>Certificate of Appreciation (Oct 2026), Aeronautical Society of India, Mumbai Branch, for contributing
+              to BeliefSat-0, launched by ISRO on PSLV-C58</li>
+            <li>Appreciation letter (Oct 2026), Innovari, SNDT Women’s University, for representing New Leap Labs at
+              Girls Day in Aviation</li>
+            <li>Selected for the Space Student Immersion Programme, IN-SPACe HQ, Ahmedabad (24–28 Feb 2025)</li>
+            <li>SmartGrow published at ICCNT, IIT Indore (Jul 2025) and presented at the National Symposium on
+              Sustainable Agriculture Innovation through Geospatial and AI (Apr 2026)</li>
+            <li>REMEASAT SSTV Award for decoding ISS images</li>
+            <li>NPTEL: Advanced Aircraft Control Systems with MATLAB Simulink</li>
+            <li>Organised HF antenna and satellite tracking workshops (CROWN-VU2CWN); ARSI Field Day, Hill Topping
+              Contest and QRP Day</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sky" id="orbit">
+      <div class="s">
+        <h2>My <em>orbit</em></h2>
+        <p class="sub">// every star is something I built</p>
+        <div class="wrap"><svg class="sk2" id="sv" viewBox="0 0 1000 600" role="group"
+            aria-label="Career timeline shaped like the Taurus constellation"></svg></div>
+      </div>
+    </section>
+
+    <section class="s" id="journey">
+      <h2>My <em>journey</em></h2>
+      <p class="sub">// analog snapshots, terrace sketches &amp; workbench traces</p>
+
+      <div class="journey-board">
+        <div class="journey-grid" id="ag-visuals-track" role="region" aria-label="Journey photographic board"></div>
+      </div>
+    </section>
+
+    <section class="s" id="contact">
+      <h2>Transmit a <em>message</em></h2>
+      <p class="sub">// type it, watch it become Morse, then it flies to my inbox</p>
+      <div class="win">
+        <header>uplink_console.exe</header>
+        <form id="f" novalidate>
+          <label>Name <span>who’s calling?</span><input name="name" autocomplete="name" required></label>
+          <label>Email <span>where do I reply?</span><input name="email" type="email" autocomplete="email"
+              required></label>
+          <label>Message <span>tell me everything</span><textarea name="msg" rows="4" required></textarea></label>
+          <div id="tp" aria-hidden="true"></div>
+          <div><span id="bc" aria-hidden="true">♥</span> <span id="stt2" role="status" aria-live="polite">LINK:
+              STANDBY</span></div>
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;">
+            <button class="btn f" type="submit" id="tx-btn">Transmit ♡</button>
+            <a class="btn" id="gmail-direct-btn"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=aaryagojare1@gmail.com" target="_blank" rel="noopener"
+              title="Open Gmail web composer in a new tab">Open in Gmail ↗</a>
+            <button class="btn" type="button" id="sk3" hidden>Skip</button>
+            <button class="btn" type="button" id="reset-msg-btn" hidden>Transmit Another Message ↺</button>
+          </div>
+          <small id="contact-hint" style="line-height:1.45;display:block;margin-top:6px;opacity:.9">
+            Direct Uplink: Transmits immediately to Aarya’s Gmail with automated confirmation. (Please check your spam
+            folder for the confirmation mail ✉)
+          </small>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="ft-links">
+        <span>Aarya Gojare · Satellite Firmware &amp; AI for Space</span>
+        <span class="dot">✦</span>
+        <a href="#work">Missions</a>
+        <span class="dot">·</span>
+        <a href="#about">About</a>
+        <span class="dot">·</span>
+        <a href="#orbit">Orbit</a>
+        <span class="dot">·</span>
+        <a href="#journey">My Journey</a>
+        <span class="dot">·</span>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>73 from Earth</div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="gallery-data.js?v=2"></script>
+  <script>
+    const $ = s => document.querySelector(s), RM = matchMedia('(prefers-reduced-motion:reduce)').matches;
+    const D = {
+      tk: ["CQ CQ CQ, THIS IS AARYA", "FIRMWARE FOR THE FINAL FRONTIER", "PACKETS IN, CHAOS OUT", "TALKING TO SATELLITES, SOMETIMES THEY ANSWER", "ERROR 404: SLEEP NOT FOUND", "DECODING THE ISS, ONE IMAGE AT A TIME", "OPEN TO SPACE ROLES", "73 FROM EARTH"],
+      pj: [["PixelDrift: Event-Driven Vision for Satellite Maritime Surveillance", "ONGOING", "With ReOrbit. Event-based sensing with SNNs, CNNs, GNNs and Transformers for real-time detection and tracking of vessels.", ["SNN", "DVS", "Transformers", "Python"], "https://github.com/Aaryaa-G/CNN"],
+      ["SomaiyaSat 2P PocketQube", "ONGOING", "Leading system integration, bringing avionics, OBC and AOCS firmware together across hardware and firmware.", ["OBC", "AOCS", "STM32"], "https://github.com/Aaryaa-G/Communication-System"],
+      ["LEAP4L1: Solar Flare Forecasting", "ONGOING", "Forecasting and nowcasting of solar flares using combined soft and hard X-ray data from Aditya-L1. A Python/TensorFlow pipeline fusing SoLEXS and HEL1OS.", ["Python", "TensorFlow"], "https://github.com/Aaryaa-G/LEAP4L1"],
+      ["OrbitRadio, TakeMe2Space MOI-1", "COMPLETED", "Telemetry firmware that acquires OBC data over RS-485 and downlinks it as APRS (AX.25/AFSK) at 437.2480 MHz.", ["AX.25", "AFSK", "RS-485"], "https://github.com/Aaryaa-G/Orbit-Radio"],
+      ["BeliefSat-0 Communication Payload", "LAUNCHED", "ATmega328P firmware combining an APRS digipeater, TT&C and a UHF-to-VHF cross-band voice repeater on a student-built satellite launched by ISRO on PSLV-C58.", ["APRS", "ATmega328P", "Digipeater"], "https://github.com/Aaryaa-G/BeliefSat-0"],
+      ["SmartGrow", "PUBLISHED", "IoT-based irrigation system for house plants. Published at the 16th ICCNT, IIT Indore (Jul 2025) and presented at a national symposium on sustainable agriculture, geospatial and AI (Apr 2026).", ["IoT", "ESP32"], "https://github.com/Aaryaa-G/Smart_irrigation_system"]],
+      sk: { "Languages": "Embedded C/C++, C, Python, MATLAB", "MCUs": "STM32, ATmega328P, ESP32, ESP8266, Raspberry Pi, ARM Cortex-M", "Embedded": "STM32 HAL, drivers, interrupts, timers, PWM, ADC, DMA, FreeRTOS, bootloader, 8051 ASM", "Hardware and debugging": "Oscilloscope, logic analyzer, multimeter, schematic and datasheet reading, hardware bring-up, analog and digital electronics", "Satellite": "OBC, AOCS, TT&C, system integration", "Protocols": "UART, SPI, I²C, CAN, RS-485, AX.25, APRS, M17, AFSK", "RF": "UHF/VHF, amateur radio, digipeaters, cross-band repeaters, SSTV", "AI and vision": "TensorFlow, OpenCV, event-based vision, neural networks", "Tools": "Git, STM32CubeIDE, PlatformIO, Keil, Arduino IDE, VS Code, MATLAB/Simulink, Smowcode" },
+      tl: [["Embedded Firmware Developer", "New Leap Labs", "Nov 2024 – Nov 2025", 120, 500, 60, 545, "start"], ["Published SmartGrow", "ICCNT, IIT Indore", "8 Jul 2025", 330, 360, 350, 325, "start"], ["Intern", "TakeMe2Space", "Jul 2025 – Mar 2026", 470, 430, 470, 475, "middle"], ["Team Manager", "New Leap Labs", "Nov 2025 – Present", 610, 340, 625, 380, "start"], ["Collaboration", "ReOrbit, Finland", "Jul 2026 – Present", 800, 170, 800, 100, "middle"], ["Next orbit", "B.Tech graduation", "Expected Jun 2027", 240, 90, 262, 85, "start"]]
+    };
+    /* ticker, projects, skills */
+    const tkh = D.tk.map(t => t + ' &nbsp;✦&nbsp; ').join(''); $('#tk').innerHTML = tkh + tkh;
+    $('#pj').innerHTML = D.pj.map(p => `<article class="c pj"><span class="st2 ${p[1] == 'ONGOING' ? 'o' : ''}">${p[1]}</span><h3>${p[0]}</h3><p>${p[2]}</p>${p[3].map(t => `<span class="ch">${t}</span>`).join('')}${p[4] ? `<p><a class="btn" href="${p[4]}" target="_blank" rel="noopener">GitHub ↗</a></p>` : ''}</article>`).join('');
+    $('#sk').insertAdjacentHTML('beforeend', Object.entries(D.sk).map(([k, v]) => `<b>${k}</b>${v.split(', ').map(t => `<span class="ch">${t}</span>`).join('')}`).join(''));
+    /* Taurus timeline */
+    (function () {
+      const sv = $('#sv'); let h = '';
+      for (let i = 0; i < 110; i++)h += `<circle class="${i % 3 ? '' : 'tw'}" cx="${Math.random() * 1000 | 0}" cy="${Math.random() * 600 | 0}" r="${(Math.random() * 1.4 + .4).toFixed(1)}" fill="#FFE3F4" opacity="${(Math.random() * .6 + .3).toFixed(2)}" style="animation-delay:${(Math.random() * 3).toFixed(1)}s"/>`;
+      const T = D.tl, P = i => T[i][3] + ',' + T[i][4];
+      h += `<polyline class="ln" pathLength="1" points="${[0, 1, 2, 3, 4].map(P).join(' ')}"/><line class="ln d" pathLength="1" x1="${T[1][3]}" y1="${T[1][4]}" x2="${T[5][3]}" y2="${T[5][4]}"/>`;
+      h += `<circle cx="545" cy="395" r="3" fill="#FFC2E2"/><circle cx="700" cy="262" r="3" fill="#FFC2E2"/>`;
+      [[780, 150], [815, 148], [830, 180], [790, 192], [806, 162], [770, 176]].forEach(c => h += `<circle cx="${c[0]}" cy="${c[1]}" r="2.2" fill="#FFC2E2" opacity=".8"/>`);
+      T.forEach((t, i) => { const r = i == 1 ? 14 : 9; h += `<g class="st" tabindex="0" role="img" aria-label="${t[0]}, ${t[1]}, ${t[2]}"><circle class="pu" cx="${t[3]}" cy="${t[4]}" r="${r * 2.3}" fill="#FF6FAE" opacity=".25"/><circle class="gl" cx="${t[3]}" cy="${t[4]}" r="${r}" fill="${i == 1 ? '#FFC49B' : '#FFE3F4'}"/><text x="${t[5]}" y="${t[6]}" text-anchor="${t[7]}" font-weight="700">${t[0]}</text><text x="${t[5]}" y="${t[6] + 21}" text-anchor="${t[7]}">${t[1]}</text><text class="dt" x="${t[5]}" y="${t[6] + 42}" text-anchor="${t[7]}">${t[2]}</text></g>` });
+      sv.innerHTML = h;
+      new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { $('#orbit').classList.add('in'); o.disconnect() } }, { threshold: .3 }).observe($('#orbit'));
+    })();
+    /* My Journey (Interactive 10-Box Board) */
+    (function () {
+      const gData = window.galleryData;
+      if (!gData || !gData.visuals) return;
+      const visualsTrack = $('#ag-visuals-track');
+      if (!visualsTrack) return;
+      visualsTrack.innerHTML = gData.visuals.map(v => `
+        <div class="journey-card" style="--rot:${v.rotation || '0deg'};transform:rotate(${v.rotation || '0deg'})" tabindex="0" role="img" aria-label="${v.title}">
+          <img src="${v.image}" alt="${v.title}" class="journey-card-img" loading="lazy">
+          <div class="journey-card-caption">${v.title}</div>
+        </div>
+      `).join('');
+    })();
+    /* Morse contact & Gmail Uplink */
+    const M = {}; 'A .-,B -...,C -.-.,D -..,E .,F ..-.,G --.,H ....,I ..,J .---,K -.-,L .-..,M --,N -.,O ---,P .--.,Q --.-,R .-.,S ...,T -,U ..-,V ...-,W .--,X -..-,Y -.--,Z --..,0 -----,1 .----,2 ..---,3 ...--,4 ....-,5 .....,6 -....,7 --...,8 ---..,9 ----.'.split(',').forEach(s => M[s[0]] = s.slice(2));
+    const f = $('#f'), tp = $('#tp'), bc = $('#bc'), st = t => $('#stt2').innerHTML = t;
+    const gBtn = $('#gmail-direct-btn'), resetBtn = $('#reset-msg-btn'), sk3Btn = $('#sk3'), txBtn = $('#tx-btn');
+    const TARGET_EMAIL = 'aaryagojare1@gmail.com';
+
+    function updateDirectLinks() {
+      const n = f.name.value.trim(), em = f.email.value.trim(), m = f.msg.value.trim();
+      const sub = encodeURIComponent('Portfolio message from ' + (n || 'Visitor'));
+      const bodyText = (m || 'Hello Aarya,\n\n') + '\n\n— ' + (n || 'Visitor') + (em ? ' (' + em + ')' : '');
+      if (gBtn) {
+        gBtn.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + TARGET_EMAIL + '&su=' + sub + '&body=' + encodeURIComponent(bodyText);
+      }
+    }
+    f.name.addEventListener('input', updateDirectLinks);
+    f.email.addEventListener('input', updateDirectLinks);
+    f.msg.addEventListener('input', () => {
+      updateDirectLinks();
+      tp.innerHTML = [...f.msg.value.slice(0, 40).toUpperCase()].map(c => c == ' ' ? '<span class="sp"></span>' : M[c] ? `<span class="lt" data-c="${M[c]}"><u>${c}</u>${[...M[c]].map(s => `<i class="d ${s == '-' ? 'h' : ''}"></i>`).join('')}</span>` : '').join('');
+      tp.scrollLeft = tp.scrollWidth;
+    });
+
+    // Reset button handler to compose another message
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        f.reset();
+        tp.innerHTML = '';
+        st('LINK: STANDBY');
+        resetBtn.hidden = true;
+        if (txBtn) txBtn.disabled = false;
+        updateDirectLinks();
+        f.name.focus();
+      });
+    }
+
+    // Initialize EmailJS with portfolio public key
+    try {
+      if (window.emailjs) {
+        window.emailjs.init({ publicKey: "444Fx6BF5-9AU8nvI" });
+      }
+    } catch (err) { console.warn("EmailJS init warning:", err); }
+
+    let skip = RM, busy = 0; const sl = ms => new Promise(r => setTimeout(r, skip ? 0 : ms));
+    if (sk3Btn) sk3Btn.onclick = () => skip = 1;
+
+    f.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (busy) return;
+      const n = f.name.value.trim(), em = f.email.value.trim(), m = f.msg.value.trim();
+      if (!n || !/^\S+@\S+\.\S+$/.test(em) || !m) {
+        st('Please add your name, a valid email and a message ♡');
+        return;
+      }
+      busy = 1;
+      skip = RM;
+      if (sk3Btn) sk3Btn.hidden = false;
+      if (resetBtn) resetBtn.hidden = true;
+      st('LINK: ENCODING MORSE UPLINK…');
+      await sl(700);
+      const u = 50;
+      for (const l of [...tp.children].slice(0, 12)) {
+        if (skip) break;
+        if (!l.dataset.c) { await sl(u * 7); continue }
+        l.classList.add('on');
+        for (const s of l.dataset.c) {
+          if (skip) break;
+          bc.classList.add('on');
+          await sl(u * (s == '.' ? 1 : 3));
+          bc.classList.remove('on');
+          await sl(u);
+        }
+        await sl(u * 3);
+      }
+      if (sk3Btn) sk3Btn.hidden = true;
+      st('LINK: TRANSMITTING TO GMAIL (' + TARGET_EMAIL + ')…');
+      await sl(400);
+
+      const sub = encodeURIComponent('Portfolio message from ' + n);
+      const bodyText = m + '\n\n— ' + n + ' (' + em + ')';
+      const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + TARGET_EMAIL + '&su=' + sub + '&body=' + encodeURIComponent(bodyText);
+      const mailtoUrl = 'mailto:' + TARGET_EMAIL + '?subject=' + sub + '&body=' + encodeURIComponent(bodyText);
+
+      let sentViaEmailJs = false;
+      if (window.emailjs) {
+        try {
+          // 1. Primary notification to Aarya
+          await window.emailjs.send("service_ur6m4b9", "template_oxayvdh", {
+            from_name: n,
+            from_email: em,
+            message: m,
+            sent_at: new Date().toLocaleString()
+          });
+          sentViaEmailJs = true;
+
+          // 2. Non-blocking auto-reply receipt to visitor
+          try {
+            window.emailjs.send("service_ur6m4b9", "template_0cfqz9a", {
+              from_name: n,
+              from_email: em,
+              message: m,
+              sent_at: new Date().toLocaleString()
+            }).catch(err => console.warn("Auto-reply background warning:", err));
+          } catch (err) {
+            console.warn("Auto-reply trigger failed:", err);
+          }
+        } catch (err) {
+          console.warn("EmailJS send failed:", err);
+        }
+      }
+
+      if (sentViaEmailJs) {
+        st('73, <strong>' + n + '</strong>! Delivered directly to Aarya\'s Gmail (<code>' + TARGET_EMAIL + '</code>) ✓<br><small style="opacity:.9;display:inline-block;margin-top:4px">✦ A confirmation dispatch was beamed to <strong>' + em + '</strong> (please check your spam folder for the confirmation mail ✉).</small>');
+        f.msg.value = '';
+        tp.innerHTML = '';
+        if (resetBtn) resetBtn.hidden = false;
+      } else {
+        st('Signal transmission paused. You can dispatch directly via <a href="' + mailtoUrl + '" style="color:#FF6FAE;text-decoration:underline">Default Email App</a> or <a href="' + gmailUrl + '" target="_blank" rel="noopener" style="color:#FF6FAE;text-decoration:underline">Open in Gmail ↗</a>');
+        const win = window.open(gmailUrl, '_blank');
+        if (!win) {
+          location.href = mailtoUrl;
+        }
+      }
+      busy = 0;
+    });
+    /* SSTV opening */
+    const W = 320, H = 240, cx = $('#sstv').getContext('2d'), oc = document.createElement('canvas'); oc.width = W; oc.height = H; const o = oc.getContext('2d');
+    (function () {
+      const g = o.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#1E1347'); g.addColorStop(.45, '#7B4FC0'); g.addColorStop(.78, '#FF6FAE'); g.addColorStop(1, '#FFC49B'); o.fillStyle = g; o.fillRect(0, 0, W, H);
+      for (let y = 0; y < H; y += 2)for (let x = y % 4 ? 1 : 0; x < W; x += 4)if (Math.random() < .08) { o.fillStyle = 'rgba(255,255,255,.25)'; o.fillRect(x, y, 1, 1) }
+      o.fillStyle = '#FFE3C2'; o.beginPath(); o.arc(262, 196, 24, 0, 7); o.fill(); o.fillStyle = '#2A1459'; o.fillRect(0, 214, W, 14);
+      const S = D.tl.map(t => [t[3] * .3, t[4] * .27 + 48]); o.strokeStyle = '#FFD6F0'; o.lineWidth = 1; o.beginPath();[0, 1, 2, 3, 4].forEach((i, k) => k ? o.lineTo(S[i][0], S[i][1]) : o.moveTo(S[i][0], S[i][1])); o.stroke();
+      S.forEach((s, i) => { o.fillStyle = i == 1 ? '#FFC49B' : '#fff'; o.fillRect(s[0] - 2, s[1] - 2, i == 1 ? 5 : 4, i == 1 ? 5 : 4) });
+      o.fillStyle = '#fff'; o.font = 'bold 24px monospace'; o.fillText('AARYA GOJARE', 12, 28); o.fillStyle = '#FFC2E2'; o.font = '9px monospace'; o.fillText('SATELLITE FIRMWARE · EMBEDDED · AI FOR SPACE', 12, 40);
+      o.fillStyle = '#FFE3F4'; o.fillText('OrbitRadio · BeliefSat-0.1 · SomaiyaSat · Aditya-L1', 12, 224);
+      o.fillStyle = '#000'; o.fillRect(0, 228, W, 12); o.fillStyle = '#fff'; const d = new Date(); o.fillText('RX-SSTV | Robot 36 | ' + d.toISOString().slice(0, 10) + ' ' + d.toTimeString().slice(0, 8), 3, 237)
+    })();
+    const src = o.getImageData(0, 0, W, H), sd = src.data, od = cx.createImageData(W, H), out = od.data;
+    let done = 0;
+    function go(fast) {
+      if (done) return;
+      done = 1;
+      const op = $('#op');
+      if (!op) return;
+      op.classList.add('out');
+      $('#mn').inert = false;
+      document.body.style.overflow = '';
+      document.body.classList.add('live');
+      setTimeout(() => {
+        op.remove();
+        $('#hero h1').focus({ preventScroll: true });
+      }, fast ? 150 : 900);
+    }
+    $('#skp').onclick = () => go(1);
+    addEventListener('keydown', e => { if (!done && (e.key == 'Escape' || e.key == 'Enter')) go(1) });
+    function ln(y) {
+      const k = 1 - y / H * .8, off = ((Math.random() - .5) * 10 * k) | 0, gl = Math.random() < .05 ? (Math.random() < .5 ? 1 : 2) : 0;
+      for (let x = 0; x < W; x++) {
+        const i = (y * W + x) * 4;
+        for (let c = 0; c < 3; c++) {
+          const sx = Math.min(W - 1, Math.max(0, (x + (c - 1) * off * .5) | 0));
+          let v = sd[(y * W + sx) * 4 + c];
+          if (Math.random() < .06 * k) v = Math.random() * 255;
+          if (gl == 1 && c != 1) v = 255;
+          if (gl == 2 && c != 1) v *= .3;
+          out[i + c] = v;
+        }
+        out[i + 3] = 255;
+      }
+    }
+    function fin() {
+      cx.putImageData(src, 0, 0);
+      $('#pg').textContent = 'TRANSMISSION COMPLETE ✓';
+      setTimeout(() => go(), RM ? 900 : 1200);
+    }
+
+    // Always decode image on load and reload
+    let dn = 0;
+    const t0 = performance.now();
+    const decodeDuration = 6000;
+    (function fr(t) {
+      const r = Math.min(H, (((t - t0) / decodeDuration) * H) | 0);
+      for (; dn < r; dn++)ln(dn);
+      cx.putImageData(od, 0, 0);
+      cx.fillStyle = '#fff';
+      cx.fillRect(0, r, W, 1);
+      $('#pg').textContent = 'RECEIVING… ' + Math.round(r / H * 100) + '%';
+      if (r < H) requestAnimationFrame(fr);
+      else fin();
+    })(t0);
+    setTimeout(() => go(), 10000);
+
+    /* Celestial Star & Glitter Trail (Pink, Purple, White) */
+    (function () {
+      const canvas = document.createElement('canvas');
+      canvas.id = 'cursor-trail-canvas';
+      canvas.setAttribute('aria-hidden', 'true');
+      Object.assign(canvas.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100vw',
+        height: '100vh',
+        pointerEvents: 'none',
+        zIndex: '999999'
+      });
+      document.body.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+      let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+      function resize() {
+        w = window.innerWidth;
+        h = window.innerHeight;
+        canvas.width = Math.floor(w * dpr);
+        canvas.height = Math.floor(h * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      resize();
+      window.addEventListener('resize', resize, { passive: true });
+
+      const colors = [
+        '#FFFFFF', '#FFF3FA', // White
+        '#FF6FAE', '#FF2A85', '#FF80BF', '#FFA3D2', // Pink
+        '#9B5DE5', '#7B4FC0', '#B57EDC', '#C084FC'  // Purple
+      ];
+
+      const particles = [];
+      let lastX = -100, lastY = -100, animId = null;
+
+      function spawnParticle(x, y, isBurst) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = isBurst ? (Math.random() * 3.5 + 1.2) : (Math.random() * 1.5 + 0.3);
+        const types = ['star4', 'star5', 'glitter', 'sparkle'];
+        particles.push({
+          x: x + (Math.random() - 0.5) * 6,
+          y: y + (Math.random() - 0.5) * 6,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed + (isBurst ? 0.2 : 0.55),
+          size: isBurst ? (Math.random() * 6 + 3) : (Math.random() * 4.5 + 2),
+          type: types[Math.floor(Math.random() * types.length)],
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * Math.PI * 2,
+          vRot: (Math.random() - 0.5) * 0.18,
+          life: 1.0,
+          decay: isBurst ? (Math.random() * 0.02 + 0.015) : (Math.random() * 0.028 + 0.018)
+        });
+      }
+
+      function drawStar4(c, sz) {
+        c.beginPath();
+        c.moveTo(0, -sz);
+        c.quadraticCurveTo(0, 0, sz, 0);
+        c.quadraticCurveTo(0, 0, 0, sz);
+        c.quadraticCurveTo(0, 0, -sz, 0);
+        c.quadraticCurveTo(0, 0, 0, -sz);
+        c.closePath();
+        c.fill();
+      }
+
+      function drawStar5(c, sz) {
+        c.beginPath();
+        for (let i = 0; i < 5; i++) {
+          c.lineTo(Math.cos((18 + i * 72) * Math.PI / 180) * sz, -Math.sin((18 + i * 72) * Math.PI / 180) * sz);
+          c.lineTo(Math.cos((54 + i * 72) * Math.PI / 180) * (sz * 0.45), -Math.sin((54 + i * 72) * Math.PI / 180) * (sz * 0.45));
+        }
+        c.closePath();
+        c.fill();
+      }
+
+      function drawGlitter(c, sz) {
+        c.beginPath();
+        c.arc(0, 0, sz * 0.45, 0, Math.PI * 2);
+        c.fill();
+        c.beginPath();
+        c.moveTo(-sz * 0.9, 0); c.lineTo(sz * 0.9, 0);
+        c.moveTo(0, -sz * 0.9); c.lineTo(0, sz * 0.9);
+        c.lineWidth = Math.max(1, sz * 0.25);
+        c.strokeStyle = c.fillStyle;
+        c.stroke();
+      }
+
+      function drawSparkle(c, sz) {
+        c.beginPath();
+        c.arc(0, 0, sz * 0.4, 0, Math.PI * 2);
+        c.fill();
+      }
+
+      function loop() {
+        ctx.clearRect(0, 0, w, h);
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.rotation += p.vRot;
+          p.life -= p.decay;
+          if (p.life <= 0) {
+            particles.splice(i, 1);
+            continue;
+          }
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rotation);
+          const twinkle = 0.8 + 0.2 * Math.sin(p.life * 14);
+          ctx.globalAlpha = Math.max(0, Math.min(1, p.life * twinkle));
+          ctx.fillStyle = p.color;
+          ctx.shadowColor = p.color;
+          ctx.shadowBlur = 3;
+          const curSize = p.size * (0.35 + 0.65 * p.life);
+          if (p.type === 'star4') drawStar4(ctx, curSize);
+          else if (p.type === 'star5') drawStar5(ctx, curSize);
+          else if (p.type === 'glitter') drawGlitter(ctx, curSize);
+          else drawSparkle(ctx, curSize);
+          ctx.restore();
+        }
+        if (particles.length > 0) {
+          animId = requestAnimationFrame(loop);
+        } else {
+          animId = null;
+        }
+      }
+
+      function triggerLoop() {
+        if (!animId) animId = requestAnimationFrame(loop);
+      }
+
+      window.addEventListener('mousemove', e => {
+        const dist = Math.hypot(e.clientX - lastX, e.clientY - lastY);
+        if (dist > 5) {
+          const count = Math.min(3, Math.floor(dist / 8) + 1);
+          for (let i = 0; i < count; i++) {
+            spawnParticle(e.clientX, e.clientY, false);
+          }
+          lastX = e.clientX;
+          lastY = e.clientY;
+          triggerLoop();
+        }
+      }, { passive: true });
+
+      window.addEventListener('click', e => {
+        for (let i = 0; i < 14; i++) {
+          spawnParticle(e.clientX, e.clientY, true);
+        }
+        triggerLoop();
+      }, { passive: true });
+
+      window.addEventListener('touchmove', e => {
+        if (e.touches && e.touches[0]) {
+          const t = e.touches[0];
+          const dist = Math.hypot(t.clientX - lastX, t.clientY - lastY);
+          if (dist > 7) {
+            spawnParticle(t.clientX, t.clientY, false);
+            lastX = t.clientX;
+            lastY = t.clientY;
+            triggerLoop();
+          }
+        }
+      }, { passive: true });
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Aarya Gojare · Art Gallery · Acrylics, gouache, botanical prints and paper collages.">
+  <title>Aarya Gojare · Art Gallery</title>
+
+  <!-- Google Fonts: Playfair Display, Cormorant Garamond, Archivo Black, Caveat, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- Shared Global Base Styles -->
+  <link rel="stylesheet" href="shared/base.css">
+
+  <!-- Scoped Art Gallery Stylesheet -->
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body data-side="art" class="art-gallery-page">
+
+  <!-- Main Art Gallery Container -->
+  <main class="ag-container" id="art-gallery">
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         1. HEADER BAND (Outlined top bar, Black label, Large Serif, Pill)
+         ══════════════════════════════════════════════════════════════════ -->
+    <header class="ag-header-band">
+      <!-- Vertical edge label running down the margin -->
+      <span class="ag-edge-label" aria-hidden="true">EXHIBITION · 2024</span>
+
+      <div class="ag-subbar">
+        <span>@aaryagojare</span>
+        <span class="ag-tag-pill">artist, designer, engineer</span>
+        <span>mumbai, in</span>
+      </div>
+
+      <div class="ag-hero-block">
+        <div class="ag-title-wrap">
+          <span class="ag-highlight-bar">welcome to my</span>
+          <h1 class="ag-main-heading">ART <em>GALLERY</em></h1>
+
+          <div class="ag-pill-quote" role="note">
+            <span class="ag-sparkle" aria-hidden="true">✦</span>
+            <span>“the act of creating something is always more important than the result”</span>
+            <span class="ag-sparkle" aria-hidden="true">✦</span>
+          </div>
+        </div>
+
+        <div class="ag-hero-decorations" aria-hidden="true">
+          <!-- White hand-drawn star inline SVG -->
+          <svg class="ag-drawn-star" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 4L62 36L96 42L70 66L77 98L50 81L23 98L30 66L4 42L38 36L50 4Z" fill="#FFFFFF" stroke="#141115" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M50 18L57 40L80 44L63 60L68 82L50 71L32 82L37 60L20 44L43 40L50 18Z" fill="#FCE8F1" opacity="0.6"/>
+          </svg>
+          <div class="ag-signature">A. Gojare ♡</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         2. CURATOR STATEMENT / COLLAGE CARD (Off-white contrast panel)
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="ag-statement-card" aria-label="Curator Statement">
+      <div class="ag-statement-inner">
+        <div class="ag-statement-copy">
+          <h2>About the works <span class="ag-script-accent">~ notes from the sketchbook</span></h2>
+          <p>
+            When I am not writing satellite telemetry code or debugging STM32 drivers, I paint.
+            This collection is a tactile counterbalance to embedded systems: wet gouache gradients,
+            pressed terrace bougainvillea, analog contact prints, and pastel spectrograms.
+            Every piece was made with paint, paper, and a stubborn desire to slow down.
+          </p>
+        </div>
+        <div class="ag-statement-stats">
+          <div class="ag-stat-box">
+            <strong>12</strong>
+            <small>Selected Works</small>
+          </div>
+          <div class="ag-stat-box">
+            <strong>4</strong>
+            <small>Mediums</small>
+          </div>
+          <div class="ag-stat-box">
+            <strong>2021–24</strong>
+            <small>Timeline</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         3. MAIN GALLERY — MASONRY / BENTO GRID
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="ag-gallery-section" aria-labelledby="gallery-heading">
+      <div class="ag-section-header">
+        <div>
+          <span class="ag-highlight-bar" id="gallery-heading">selected works.</span>
+        </div>
+        <div class="ag-section-note">// click any piece to inspect &amp; read story</div>
+      </div>
+
+      <!-- Category Filter Bar -->
+      <nav class="ag-filter-bar" id="ag-filter-bar" aria-label="Filter artworks by medium"></nav>
+
+      <!-- Framing Container -->
+      <div class="ag-grid-frame">
+        <div class="ag-masonry-grid" id="ag-masonry-grid" role="region" aria-label="Artworks Masonry Grid">
+          <!-- Artwork tiles injected by gallery.js from gallery-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         4. SUB-STRIP: "VISUALS" STRING LINE WITH BINDER CLIPS AND TAPE
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="ag-visuals-strip" aria-labelledby="visuals-heading">
+      <div class="ag-visuals-head">
+        <span class="ag-highlight-bar" id="visuals-heading">visuals. photographs.</span>
+        <span class="ag-highlight-bar">eye for aesthetics.</span>
+      </div>
+
+      <!-- Hanging Clothesline String SVG -->
+      <svg class="ag-string-line" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,8 Q300,32 600,16 T1200,10" />
+      </svg>
+
+      <!-- Pinned Photos Track -->
+      <div class="ag-visuals-track" id="ag-visuals-track" role="region" aria-label="Pinned visual snapshots">
+        <!-- Pinned photos injected by gallery.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       5. ACCESSIBLE LIGHTBOX MODAL (Keyboard Nav: Arrows, Esc)
+       ══════════════════════════════════════════════════════════════════ -->
+  <div class="ag-lightbox" id="ag-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="ag-modal-title">
+    <div class="ag-lightbox-panel">
+      <!-- Close button -->
+      <button type="button" class="ag-lightbox-close" id="ag-btn-close" aria-label="Close artwork details">×</button>
+
+      <!-- Image Stage -->
+      <div class="ag-lightbox-stage">
+        <img id="ag-modal-img" src="" alt="">
+      </div>
+
+      <!-- Info Details -->
+      <div class="ag-lightbox-info">
+        <div>
+          <div class="ag-badge-row">
+            <span class="ag-modal-badge" id="ag-modal-badge">PAINTING</span>
+            <span class="ag-modal-year" id="ag-modal-year">2024</span>
+          </div>
+
+          <h2 class="ag-modal-title" id="ag-modal-title">Artwork Title</h2>
+
+          <ul class="ag-modal-meta">
+            <li><strong>Dimensions:</strong> <span id="ag-modal-dim">50 × 70 cm</span></li>
+            <li><strong>Artist:</strong> Aarya Gojare</li>
+            <li><strong>Location:</strong> Mumbai Studio</li>
+          </ul>
+
+          <p class="ag-modal-desc" id="ag-modal-desc">Detailed artwork description...</p>
+        </div>
+
+        <!-- Arrow Navigation Controls -->
+        <div class="ag-lightbox-nav">
+          <button type="button" class="ag-nav-btn" id="ag-btn-prev" aria-label="Previous artwork">
+            ← PREV
+          </button>
+          <span class="ag-counter" id="ag-modal-counter" aria-live="polite">1 / 12</span>
+          <button type="button" class="ag-nav-btn" id="ag-btn-next" aria-label="Next artwork">
+            NEXT →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       6. SITE FOOTER WITH SIDE SWITCHER & HOME LINK
+       ══════════════════════════════════════════════════════════════════ -->
+  <footer class="ag-footer">
+    <div>
+      <a href="index.html">← Back to Home Hub</a>
+      <span style="margin: 0 .6rem; opacity: .4;">|</span>
+      <span>Switch side: <a href="space.html">✦ Space</a></span>
+      <span style="margin: 0 .6rem; opacity: .4;">|</span>
+      <span>Contact: <a href="mailto:aaryagojare1@gmail.com">aaryagojare1@gmail.com</a> · <a href="space.html#contact">Transmit Morse ↗</a></span>
+    </div>
+    <span>made with paint, pixels and a suspicious amount of plum ✦ 2024</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="shared/data.js"></script>
+  <script src="shared/nav.js"></script>
+  <script src="gallery-data.js"></script>
+  <script src="gallery.js"></script>
+  <script src="shared/transitions.js"></script>
+</body>
+</html>
