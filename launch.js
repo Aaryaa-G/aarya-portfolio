@@ -23,7 +23,7 @@
     const stage = Math.min(data.launch.stages.length - 1, Math.floor(progress * data.launch.stages.length));
     root.style.setProperty("--p", progress.toFixed(4));
     root.style.setProperty("--alt", `${Math.round(progress * 400)}px`);
-    const palette = progress < .25 ? ["#FFC49B", "#FF6FAE"] : progress < .5 ? ["#9B5DE5", "#4B2A86"] : ["#4B2A86", "#1E1347"];
+    const palette = progress < .25 ? ["#D5B893", "#617891"] : progress < .5 ? ["#617891", "#25344F"] : ["#25344F", "#1B2639"];
     root.style.setProperty("--sky-a", palette[0]);
     root.style.setProperty("--sky-b", palette[1]);
     altitude.textContent = `ALT ${Math.round(progress * 400)} km`;

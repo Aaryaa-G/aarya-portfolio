@@ -39,22 +39,22 @@
   };
   const drawFinalFrame = () => {
     const gradient = finalCtx.createLinearGradient(0, 0, 0, 240);
-    gradient.addColorStop(0, "#4B2A86");
-    gradient.addColorStop(.58, "#9B5DE5");
-    gradient.addColorStop(1, "#FF6FAE");
+    gradient.addColorStop(0, "#6F4D38");
+    gradient.addColorStop(.58, "#617891");
+    gradient.addColorStop(1, "#632024");
     finalCtx.fillStyle = gradient;
     finalCtx.fillRect(0, 0, 320, 240);
-    finalCtx.fillStyle = "#FFF3FA";
+    finalCtx.fillStyle = "#F1E9DA";
     for (let i = 0; i < 70; i += 1) {
       const x = (i * 47) % 320;
       const y = (i * 23) % 128;
       finalCtx.fillRect(x, y, i % 7 ? 1 : 2, i % 7 ? 1 : 2);
     }
-    finalCtx.fillStyle = "#FFC49B";
+    finalCtx.fillStyle = "#D5B893";
     finalCtx.beginPath();
     finalCtx.arc(240, 106, 28, 0, Math.PI * 2);
     finalCtx.fill();
-    finalCtx.strokeStyle = "#FFC2E2";
+    finalCtx.strokeStyle = "#D5B893";
     finalCtx.lineWidth = 1;
     const stars = [[55, 62], [94, 95], [142, 73], [185, 108], [232, 58]];
     finalCtx.beginPath();
@@ -64,40 +64,40 @@
     });
     finalCtx.stroke();
     stars.forEach(([x, y]) => finalCtx.fillRect(x - 2, y - 2, 4, 4));
-    finalCtx.fillStyle = "#1E1347";
+    finalCtx.fillStyle = "#25344F";
     finalCtx.fillRect(0, 190, 320, 50);
     finalCtx.fillRect(270, 165, 5, 25);
-    finalCtx.strokeStyle = "#1E1347";
+    finalCtx.strokeStyle = "#25344F";
     finalCtx.beginPath();
     finalCtx.arc(272, 163, 20, Math.PI, Math.PI * 2);
     finalCtx.moveTo(272, 163);
     finalCtx.lineTo(272, 145);
     finalCtx.stroke();
-    finalCtx.fillStyle = "#FF6FAE";
+    finalCtx.fillStyle = "#632024";
     finalCtx.fillRect(135, 125, 22, 18);
-    finalCtx.fillStyle = "#FFC2E2";
+    finalCtx.fillStyle = "#D5B893";
     finalCtx.fillRect(128, 128, 7, 12);
     finalCtx.fillRect(157, 128, 7, 12);
-    finalCtx.fillStyle = "#1E1347";
+    finalCtx.fillStyle = "#25344F";
     finalCtx.fillRect(143, 143, 6, 8);
-    pixelText(finalCtx, data.name.toUpperCase(), 160, 12, 22, "#FFF3FA", "center");
-    pixelText(finalCtx, data.sstv.subtitle, 160, 39, 6, "#FFF3FA", "center");
-    data.sstv.details.forEach((detail, index) => pixelText(finalCtx, detail, 8, 198 + index * 8, 6, "#FFC2E2"));
+    pixelText(finalCtx, data.name.toUpperCase(), 160, 12, 22, "#F1E9DA", "center");
+    pixelText(finalCtx, data.sstv.subtitle, 160, 39, 6, "#F1E9DA", "center");
+    data.sstv.details.forEach((detail, index) => pixelText(finalCtx, detail, 8, 198 + index * 8, 6, "#D5B893"));
     for (let y = 0; y < 240; y += 4) {
-      finalCtx.fillStyle = "rgba(30,19,71,.12)";
+      finalCtx.fillStyle = "rgba(37,52,79,.12)";
       finalCtx.fillRect(0, y, 320, 1);
     }
   };
   const noise = (progress) => {
-    ctx.fillStyle = "#1E1347";
+    ctx.fillStyle = "#25344F";
     ctx.fillRect(0, 0, 320, 240);
     const amount = Math.max(12, Math.floor(130 * (1 - progress)));
     for (let i = 0; i < amount; i += 1) {
-      ctx.fillStyle = i % 3 ? "#9B5DE5" : "#FF6FAE";
+      ctx.fillStyle = i % 3 ? "#617891" : "#632024";
       ctx.fillRect(Math.random() * 320, Math.random() * 240, 1 + Math.random() * 3, 1 + Math.random() * 2);
     }
     if (Math.random() < .08) {
-      ctx.fillStyle = Math.random() < .5 ? "#FF6FAE" : "#FFC2E2";
+      ctx.fillStyle = Math.random() < .5 ? "#632024" : "#D5B893";
       ctx.fillRect(0, Math.random() * 240, 320, 2 + Math.random() * 5);
     }
   };
@@ -111,10 +111,10 @@
       ctx.drawImage(finalFrame, 0, 0, 320, line, 3, 0, 320, line);
       ctx.globalAlpha = 1;
     }
-    ctx.fillStyle = "#FFF3FA";
+    ctx.fillStyle = "#F1E9DA";
     ctx.fillRect(0, Math.min(239, line), 320, 1);
     if (Math.random() < .035) {
-      ctx.fillStyle = Math.random() < .5 ? "#FF6FAE" : "#FFF3FA";
+      ctx.fillStyle = Math.random() < .5 ? "#632024" : "#F1E9DA";
       ctx.fillRect(0, Math.max(0, line - 2), 320, 2);
     }
   };

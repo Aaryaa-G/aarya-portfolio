@@ -37,7 +37,7 @@ const galleryData = {
       image: "assets/paintings/01.svg",
       orientation: "tall",
       tag: "PAINTING",
-      palette: ["#B5587F", "#F7DCE5", "#34204F", "#FFC49B"]
+      palette: ["#632024", "#D5B893", "#6F4D38", "#D5B893"]
     },
     {
       id: "art-02",
@@ -49,7 +49,7 @@ const galleryData = {
       image: "assets/paintings/02.svg",
       orientation: "wide",
       tag: "GOUACHE",
-      palette: ["#9B5DE5", "#FFC2E2", "#1E1347", "#FFE3F4"]
+      palette: ["#617891", "#D5B893", "#25344F", "#F1E9DA"]
     },
     {
       id: "art-03",
@@ -61,7 +61,7 @@ const galleryData = {
       image: "assets/paintings/03.svg",
       orientation: "square",
       tag: "COLLAGE",
-      palette: ["#F9CC7C", "#B6D59F", "#4B2A86", "#FAF3EC"]
+      palette: ["#D5B893", "#617891", "#6F4D38", "#F1E9DA"]
     },
     {
       id: "art-04",
@@ -73,7 +73,7 @@ const galleryData = {
       image: "assets/paintings/04.svg",
       orientation: "tall",
       tag: "WATERCOLOUR",
-      palette: ["#FF6FAE", "#FFC2E2", "#7B4FC0", "#120A24"]
+      palette: ["#632024", "#D5B893", "#617891", "#1B2639"]
     },
     {
       id: "art-05",
@@ -85,7 +85,7 @@ const galleryData = {
       image: "assets/paintings/05.svg",
       orientation: "wide",
       tag: "OIL",
-      palette: ["#D49A45", "#5F9A68", "#FFF8ED", "#8C5638"]
+      palette: ["#D5B893", "#617891", "#FAF5EB", "#6F4D38"]
     },
     {
       id: "art-06",
@@ -97,7 +97,7 @@ const galleryData = {
       image: "assets/paintings/06.svg",
       orientation: "square",
       tag: "MIXED MEDIA",
-      palette: ["#4A1A60", "#A891E8", "#FFF3FA", "#6F9C68"]
+      palette: ["#6F4D38", "#617891", "#F1E9DA", "#617891"]
     },
     {
       id: "art-07",
@@ -109,7 +109,7 @@ const galleryData = {
       image: "assets/paintings/07.svg",
       orientation: "tall",
       tag: "PAINTING",
-      palette: ["#3D7049", "#B6D59F", "#FFC49B", "#263B32"]
+      palette: ["#617891", "#617891", "#D5B893", "#25344F"]
     },
     {
       id: "art-08",
@@ -121,7 +121,7 @@ const galleryData = {
       image: "assets/paintings/08.svg",
       orientation: "wide",
       tag: "GOUACHE",
-      palette: ["#FFC49B", "#FF6FAE", "#4B2A86", "#FFE3C2"]
+      palette: ["#D5B893", "#632024", "#6F4D38", "#D5B893"]
     },
     {
       id: "art-09",
@@ -133,7 +133,7 @@ const galleryData = {
       image: "assets/paintings/09.svg",
       orientation: "tall",
       tag: "BOTANICAL",
-      palette: ["#B5587F", "#8FB996", "#FAF3EC", "#5A1E38"]
+      palette: ["#632024", "#617891", "#F1E9DA", "#632024"]
     },
     {
       id: "art-10",
@@ -145,7 +145,7 @@ const galleryData = {
       image: "assets/paintings/10.svg",
       orientation: "tall",
       tag: "GLITCH ART",
-      palette: ["#9B5DE5", "#FF6FAE", "#1E1347", "#FFD6F0"]
+      palette: ["#617891", "#632024", "#25344F", "#F1E9DA"]
     },
     {
       id: "art-11",
@@ -157,7 +157,7 @@ const galleryData = {
       image: "assets/paintings/11.svg",
       orientation: "wide",
       tag: "SKETCH",
-      palette: ["#B98646", "#34204F", "#FAF3EC", "#D875A1"]
+      palette: ["#D5B893", "#6F4D38", "#F1E9DA", "#D5B893"]
     },
     {
       id: "art-12",
@@ -169,7 +169,7 @@ const galleryData = {
       image: "assets/paintings/12.svg",
       orientation: "square",
       tag: "PAINTING",
-      palette: ["#6B2D8B", "#FF6FAE", "#120A24", "#FFC2E2"]
+      palette: ["#6F4D38", "#632024", "#1B2639", "#D5B893"]
     }
   ],
   visuals: [

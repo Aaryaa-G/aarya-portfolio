@@ -113,7 +113,7 @@
 
 
     /* hub or unknown: simple fade */
-    overlay.style.background = '#fffaf3';
+    overlay.style.background = '#FAF5EB';
     overlay.classList.add('tx-fade-out');
     var t2 = setTimeout(done, 220);
     overlay.addEventListener('animationend', function() { clearTimeout(t2); document.removeEventListener('keydown', doSkip); document.removeEventListener('pointerdown', doSkip); done(); }, { once: true });
@@ -185,7 +185,7 @@
 
 
     /* hub or unknown: simple fade out */
-    overlay.style.background = '#fffaf3';
+    overlay.style.background = '#FAF5EB';
     overlay.style.opacity = '1';
     overlay.classList.add('tx-fade-in');
     overlay.addEventListener('animationend', onDone, { once: true });

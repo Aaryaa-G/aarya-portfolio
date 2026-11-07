@@ -141,10 +141,10 @@
       <div class="ag-photo-pin" style="transform: rotate(${item.rotation || '0deg'});" data-vis-id="${item.id}" tabindex="0" role="button" aria-label="Visual snapshot: ${item.title}">
         <!-- SVG Binder Clip -->
         <svg class="ag-clip-icon" viewBox="0 0 28 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M7 16V6C7 3.5 9 1.5 11.5 1.5H16.5C19 1.5 21 3.5 21 6V16" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M9 16V9C9 7.5 10.5 6 12 6H16C17.5 6 19 7.5 19 9V16" stroke="#222222" stroke-width="2"/>
-          <rect x="2" y="14" width="24" height="22" rx="3" fill="${item.clipColor || '#b5587f'}" stroke="#141115" stroke-width="2"/>
-          <circle cx="14" cy="25" r="4" fill="#ffffff" opacity="0.4"/>
+          <path d="M7 16V6C7 3.5 9 1.5 11.5 1.5H16.5C19 1.5 21 3.5 21 6V16" stroke="#FAF5EB" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M9 16V9C9 7.5 10.5 6 12 6H16C17.5 6 19 7.5 19 9V16" stroke="#25344F" stroke-width="2"/>
+          <rect x="2" y="14" width="24" height="22" rx="3" fill="${item.clipColor || '#632024'}" stroke="#25344F" stroke-width="2"/>
+          <circle cx="14" cy="25" r="4" fill="#FAF5EB" opacity="0.4"/>
         </svg>
         <figure class="ag-photo-card">
           <img src="${item.image}" alt="${item.title}" loading="lazy">

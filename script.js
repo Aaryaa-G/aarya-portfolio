@@ -166,21 +166,11 @@ const toggleMusic = () => {
 playToggle.addEventListener("click", toggleMusic);
 heroPlayToggle.addEventListener("click", toggleMusic);
 const cursorMedia = window.matchMedia("(min-width: 800px) and (hover: hover) and (pointer: fine)");
-const motionMedia = window.matchMedia("(prefers-reduced-motion: reduce)");
-let glitterIndex = 0;
 document.addEventListener("mousemove", event => {
   const cursor = $(".cursor-star");
   if (!cursor || !cursorMedia.matches) return;
   cursor.style.left = `${event.clientX}px`;
   cursor.style.top = `${event.clientY}px`;
-  if (motionMedia.matches || ++glitterIndex % 2) return;
-  const glitter = document.createElement("span");
-  const colors = ["pink", "white", "purple"];
-  glitter.className = `cursor-glitter cursor-glitter-${colors[glitterIndex % colors.length]}`;
-  glitter.style.left = `${event.clientX + (Math.random() * 12 - 6)}px`;
-  glitter.style.top = `${event.clientY + (Math.random() * 12 - 6)}px`;
-  document.body.appendChild(glitter);
-  setTimeout(() => glitter.remove(), 700);
 });
 
 const groundReadout = $("#ground-readout");

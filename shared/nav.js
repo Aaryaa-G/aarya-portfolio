@@ -21,7 +21,7 @@
       <button class="sound-toggle" type="button" aria-pressed="${storedSound}" aria-label="${storedSound ? "Mute sound" : "Enable sound"}">${storedSound ? "🔊" : "🔇"}</button>
     </div>`;
   document.body.prepend(nav);
-  document.documentElement.style.setProperty("--side-accent", page === "art" ? "#b5587f" : "#e95d9d");
+  document.documentElement.style.setProperty("--side-accent", page === "art" ? "#632024" : "#632024");
   const toggle = nav.querySelector(".sound-toggle");
   toggle.addEventListener("click", () => {
     const enabled = toggle.getAttribute("aria-pressed") !== "true";

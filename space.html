@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -12,27 +12,27 @@
     rel="stylesheet">
   <style>
     :root {
-      --bg: #FFF3FA;
-      --tx: #1E1347;
-      --card: #fff;
-      --ln: #1E1347;
-      --sh: #FF6FAE;
-      --soft: #FFC2E2;  
+      --bg: #F1E9DA;
+      --tx: #25344F;
+      --card: #FAF5EB;
+      --ln: #25344F;
+      --sh: #632024;
+      --soft: #D5B893;
       box-sizing: border-box;
       padding-top: env(safe-area-inset-top, 0px);
       padding-bottom: env(safe-area-inset-bottom, 0px);
-      --cur-default: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2724%27%20height%3D%2724%27%20viewBox%3D%270%200%2024%2024%27%3E%20%3Cpolygon%20points%3D%2712.0%2C2.0%2014.7%2C8.8%2022.0%2C9.3%2016.4%2C13.9%2018.2%2C21.0%2012.0%2C17.1%205.8%2C21.0%207.6%2C13.9%202.0%2C9.3%209.3%2C8.8%27%20fill%3D%27%23ffffff%27%20stroke%3D%27%231E1347%27%20stroke-width%3D%271.8%27%20stroke-linejoin%3D%27round%27/%3E%20%3Ccircle%20cx%3D%2712%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23FF2A85%27/%3E%20%3C/svg%3E") 12 2, auto;
-      --cur-pointer: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2724%27%20height%3D%2724%27%20viewBox%3D%270%200%2024%2024%27%3E%20%3Cpolygon%20points%3D%2712.0%2C2.0%2014.7%2C8.8%2022.0%2C9.3%2016.4%2C13.9%2018.2%2C21.0%2012.0%2C17.1%205.8%2C21.0%207.6%2C13.9%202.0%2C9.3%209.3%2C8.8%27%20fill%3D%27%23ffffff%27%20stroke%3D%27%23FF2A85%27%20stroke-width%3D%271.8%27%20stroke-linejoin%3D%27round%27/%3E%20%3Ccircle%20cx%3D%2712%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%239B5DE5%27/%3E%20%3C/svg%3E") 12 2, pointer
+      --cur-default: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2724%27%20height%3D%2724%27%20viewBox%3D%270%200%2024%2024%27%3E%20%3Cpolygon%20points%3D%2712.0%2C2.0%2014.7%2C8.8%2022.0%2C9.3%2016.4%2C13.9%2018.2%2C21.0%2012.0%2C17.1%205.8%2C21.0%207.6%2C13.9%202.0%2C9.3%209.3%2C8.8%27%20fill%3D%27%23FAF5EB%27%20stroke%3D%27%2325344F%27%20stroke-width%3D%271.8%27%20stroke-linejoin%3D%27round%27/%3E%20%3Ccircle%20cx%3D%2712%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23632024%27/%3E%20%3C/svg%3E") 12 2, auto;
+      --cur-pointer: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2724%27%20height%3D%2724%27%20viewBox%3D%270%200%2024%2024%27%3E%20%3Cpolygon%20points%3D%2712.0%2C2.0%2014.7%2C8.8%2022.0%2C9.3%2016.4%2C13.9%2018.2%2C21.0%2012.0%2C17.1%205.8%2C21.0%207.6%2C13.9%202.0%2C9.3%209.3%2C8.8%27%20fill%3D%27%23FAF5EB%27%20stroke%3D%27%23632024%27%20stroke-width%3D%271.8%27%20stroke-linejoin%3D%27round%27/%3E%20%3Ccircle%20cx%3D%2712%27%20cy%3D%2713%27%20r%3D%271.8%27%20fill%3D%27%23617891%27/%3E%20%3C/svg%3E") 12 2, pointer
     }
 
     ::selection {
-      background: #FF2A85;
-      color: #FFF3FA
+      background: #632024;
+      color: #F1E9DA
     }
 
     ::-moz-selection {
-      background: #FF2A85;
-      color: #FFF3FA
+      background: #632024;
+      color: #F1E9DA
     }
 
     html,
@@ -102,7 +102,7 @@
     }
 
     :focus-visible {
-      outline: 3px solid #FF6FAE;
+      outline: 3px solid #632024;
       outline-offset: 3px
     }
 
@@ -111,14 +111,14 @@
       position: fixed;
       inset: 0;
       z-index: 100;
-      background: #120a24;
+      background: #1B2639;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 14px;
       transition: opacity .8s, transform .8s;
-      color: #FFC2E2
+      color: #D5B893
     }
 
     #op.out {
@@ -128,10 +128,10 @@
     }
 
     #op .fr {
-      border: 3px solid #FF6FAE;
-      box-shadow: 6px 6px 0 #9B5DE5;
+      border: 3px solid #632024;
+      box-shadow: 6px 6px 0 #617891;
       padding: 10px;
-      background: #1E1347;
+      background: #25344F;
       width: min(92vw, 640px)
     }
 
@@ -139,7 +139,7 @@
       width: 100%;
       display: block;
       image-rendering: pixelated;
-      background: #120a24;
+      background: #1B2639;
       aspect-ratio: 4/3
     }
 
@@ -152,9 +152,9 @@
 
     #skp {
       font: inherit;
-      background: #FF6FAE;
-      color: #1E1347;
-      border: 3px solid #FFC2E2;
+      background: #632024;
+      color: #25344F;
+      border: 3px solid #D5B893;
       padding: 6px 16px;
       cursor: pointer;
       font-weight: 700
@@ -190,7 +190,7 @@
     }
 
     .nav-brand:hover {
-      color: #FF6FAE
+      color: #632024
     }
 
     .nav-links {
@@ -207,7 +207,7 @@
     }
 
     .nav-links a:hover {
-      color: #FF6FAE
+      color: #632024
     }
 
     .ft-links {
@@ -226,7 +226,7 @@
     }
 
     .ft-links a:hover {
-      color: #FF6FAE
+      color: #632024
     }
 
     .ft-links .dot {
@@ -248,7 +248,7 @@
 
     h2 em {
       font-style: normal;
-      color: #FF6FAE
+      color: #632024
     }
 
     .sub {
@@ -292,9 +292,9 @@
     }
 
     .btn.f {
-      background: #1E1347;
-      color: #FFF3FA;
-      border-color: #1E1347
+      background: #25344F;
+      color: #F1E9DA;
+      border-color: #25344F
     }
 
     .btn:hover {
@@ -313,8 +313,8 @@
 
     .tag {
       display: inline-block;
-      background: #FF6FAE;
-      color: #1E1347;
+      background: #632024;
+      color: #25344F;
       border: 3px solid var(--ln);
       padding: 2px 12px;
       font-weight: 700;
@@ -330,16 +330,20 @@
     }
 
     .hero h1 span {
-      color: #FF6FAE;
+      color: #632024;
       display: block
     }
 
     mark {
-      background: linear-gradient(transparent 15%, #FF2A85 15%);
-      color: inherit;
+      background: #632024;
+      color: #FFFFFF;
       padding: 1px 5px;
       font-weight: 700;
       border-radius: 2px
+    }
+
+    .hero > div:first-child > p.rv:first-of-type {
+      color: #25344F
     }
 
     .hero-photo-wrap {
@@ -371,8 +375,8 @@
     .hero-photo-badge {
       position: absolute;
       bottom: -10px;
-      background: #1E1347;
-      color: #FFC2E2;
+      background: #25344F;
+      color: #D5B893;
       border: 2.5px solid var(--ln);
       box-shadow: 3px 3px 0 var(--sh);
       padding: 4px 14px;
@@ -410,8 +414,8 @@
     /* ticker */
     .tk {
       overflow: hidden;
-      background: #1E1347;
-      color: #FFC2E2;
+      background: #25344F;
+      color: #D5B893;
       border-block: 3px solid var(--ln);
       white-space: nowrap
     }
@@ -468,14 +472,14 @@
       display: inline-block;
       font-size: 11px;
       font-weight: 700;
-      background: #FFC49B;
-      color: #1E1347;
-      border: 2px solid #1E1347;
+      background: #D5B893;
+      color: #25344F;
+      border: 2px solid #25344F;
       padding: 0 8px
     }
 
     .st2.o {
-      background: #FF6FAE
+      background: #632024
     }
 
     .bento {
@@ -523,17 +527,17 @@
     /* sky */
     .sky {
       position: relative;
-      background: linear-gradient(#1E1347, #4B2A86 55%, #7B4FC0);
-      color: #FFD6F0;
+      background: linear-gradient(#25344F, #1B2639);
+      color: #F1E9DA;
       border-block: 3px solid var(--ln)
     }
 
     .sky h2 em {
-      color: #FFC2E2
+      color: #D5B893
     }
 
     .sky .sub {
-      color: #FFC2E2
+      color: #D5B893
     }
 
     .wrap {
@@ -549,12 +553,12 @@
     }
 
     .sk2 text {
-      fill: #FFD6F0;
+      fill: #F1E9DA;
       font: 17px 'JetBrains Mono', monospace
     }
 
     .sk2 .dt {
-      fill: #FFC49B;
+      fill: #D5B893;
       opacity: 0;
       transition: opacity .2s
     }
@@ -570,17 +574,17 @@
     }
 
     .st:focus .gl {
-      stroke: #fff;
+      stroke: #FAF5EB;
       stroke-width: 2
     }
 
     .ln {
       fill: none;
-      stroke: #FFD6F0;
+      stroke: #F1E9DA;
       stroke-width: 2;
       stroke-dasharray: 1;
       stroke-dashoffset: 1;
-      filter: drop-shadow(0 0 4px #FF6FAE)
+      filter: drop-shadow(0 0 4px #632024)
     }
 
     .in .ln {
@@ -632,8 +636,8 @@
     }
 
     .win>header {
-      background: #FF6FAE;
-      color: #1E1347;
+      background: #632024;
+      color: #25344F;
       padding: 6px 12px;
       font-weight: 700;
       border-bottom: 3px solid var(--ln)
@@ -654,7 +658,7 @@
       font-family: 'Caveat', cursive;
       font-size: 17px;
       font-weight: 600;
-      color: #FF6FAE
+      color: #632024
     }
 
     input,
@@ -668,9 +672,9 @@
     }
 
     #tp {
-      background: #FFF3FA;
-      color: #1E1347;
-      border-block: 2px dashed #1E1347;
+      background: #F1E9DA;
+      color: #25344F;
+      border-block: 2px dashed #25344F;
       min-height: 58px;
       padding: 6px;
       overflow-x: auto;
@@ -699,7 +703,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #1E1347;
+      background: #25344F;
       margin: 0 2px
     }
 
@@ -709,23 +713,23 @@
     }
 
     .lt.on .d {
-      background: #FF6FAE
+      background: #632024
     }
 
     .lt.on u {
-      color: #FF6FAE;
+      color: #632024;
       font-weight: 700
     }
 
     #bc {
       font-size: 26px;
-      color: #9B5DE5;
+      color: #617891;
       transition: .05s
     }
 
     #bc.on {
-      color: #FF6FAE;
-      text-shadow: 0 0 12px #FF6FAE
+      color: #632024;
+      text-shadow: 0 0 12px #632024
     }
 
     #stt2 {
@@ -739,7 +743,7 @@
     }
 
     .journey-board {
-      background: #8870A2;
+      background: #6F4D38;
       border: 3px solid var(--ln);
       box-shadow: 8px 10px 0 var(--sh);
       padding: 26px 18px 32px;
@@ -759,7 +763,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: #ffffff;
+      background: #FAF5EB;
       border: 2.5px solid var(--ln);
       box-shadow: 6px 8px 0 var(--sh);
       padding: 8px 8px 12px;
@@ -793,7 +797,7 @@
       font-family: 'Caveat', cursive;
       font-size: 15px;
       font-weight: 700;
-      color: #1E1347;
+      color: #25344F;
       text-align: center;
       line-height: 1.2;
       padding: 0 4px;
@@ -1056,12 +1060,12 @@
     /* Taurus timeline */
     (function () {
       const sv = $('#sv'); let h = '';
-      for (let i = 0; i < 110; i++)h += `<circle class="${i % 3 ? '' : 'tw'}" cx="${Math.random() * 1000 | 0}" cy="${Math.random() * 600 | 0}" r="${(Math.random() * 1.4 + .4).toFixed(1)}" fill="#FFE3F4" opacity="${(Math.random() * .6 + .3).toFixed(2)}" style="animation-delay:${(Math.random() * 3).toFixed(1)}s"/>`;
+      for (let i = 0; i < 110; i++)h += `<circle class="${i % 3 ? '' : 'tw'}" cx="${Math.random() * 1000 | 0}" cy="${Math.random() * 600 | 0}" r="${(Math.random() * 1.4 + .4).toFixed(1)}" fill="#F1E9DA" opacity="${(Math.random() * .6 + .3).toFixed(2)}" style="animation-delay:${(Math.random() * 3).toFixed(1)}s"/>`;
       const T = D.tl, P = i => T[i][3] + ',' + T[i][4];
       h += `<polyline class="ln" pathLength="1" points="${[0, 1, 2, 3, 4].map(P).join(' ')}"/><line class="ln d" pathLength="1" x1="${T[1][3]}" y1="${T[1][4]}" x2="${T[5][3]}" y2="${T[5][4]}"/>`;
-      h += `<circle cx="545" cy="395" r="3" fill="#FFC2E2"/><circle cx="700" cy="262" r="3" fill="#FFC2E2"/>`;
-      [[780, 150], [815, 148], [830, 180], [790, 192], [806, 162], [770, 176]].forEach(c => h += `<circle cx="${c[0]}" cy="${c[1]}" r="2.2" fill="#FFC2E2" opacity=".8"/>`);
-      T.forEach((t, i) => { const r = i == 1 ? 14 : 9; h += `<g class="st" tabindex="0" role="img" aria-label="${t[0]}, ${t[1]}, ${t[2]}"><circle class="pu" cx="${t[3]}" cy="${t[4]}" r="${r * 2.3}" fill="#FF6FAE" opacity=".25"/><circle class="gl" cx="${t[3]}" cy="${t[4]}" r="${r}" fill="${i == 1 ? '#FFC49B' : '#FFE3F4'}"/><text x="${t[5]}" y="${t[6]}" text-anchor="${t[7]}" font-weight="700">${t[0]}</text><text x="${t[5]}" y="${t[6] + 21}" text-anchor="${t[7]}">${t[1]}</text><text class="dt" x="${t[5]}" y="${t[6] + 42}" text-anchor="${t[7]}">${t[2]}</text></g>` });
+      h += `<circle cx="545" cy="395" r="3" fill="#D5B893"/><circle cx="700" cy="262" r="3" fill="#D5B893"/>`;
+      [[780, 150], [815, 148], [830, 180], [790, 192], [806, 162], [770, 176]].forEach(c => h += `<circle cx="${c[0]}" cy="${c[1]}" r="2.2" fill="#D5B893" opacity=".8"/>`);
+      T.forEach((t, i) => { const r = i == 1 ? 14 : 9; h += `<g class="st" tabindex="0" role="img" aria-label="${t[0]}, ${t[1]}, ${t[2]}"><circle class="pu" cx="${t[3]}" cy="${t[4]}" r="${r * 2.3}" fill="#632024" opacity=".25"/><circle class="gl" cx="${t[3]}" cy="${t[4]}" r="${r}" fill="${i == 1 ? '#D5B893' : '#F1E9DA'}"/><text x="${t[5]}" y="${t[6]}" text-anchor="${t[7]}" font-weight="700">${t[0]}</text><text x="${t[5]}" y="${t[6] + 21}" text-anchor="${t[7]}">${t[1]}</text><text class="dt" x="${t[5]}" y="${t[6] + 42}" text-anchor="${t[7]}">${t[2]}</text></g>` });
       sv.innerHTML = h;
       new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { $('#orbit').classList.add('in'); o.disconnect() } }, { threshold: .3 }).observe($('#orbit'));
     })();
@@ -1194,7 +1198,7 @@
         tp.innerHTML = '';
         if (resetBtn) resetBtn.hidden = false;
       } else {
-        st('Signal transmission paused. You can dispatch directly via <a href="' + mailtoUrl + '" style="color:#FF6FAE;text-decoration:underline">Default Email App</a> or <a href="' + gmailUrl + '" target="_blank" rel="noopener" style="color:#FF6FAE;text-decoration:underline">Open in Gmail ↗</a>');
+        st('Signal transmission paused. You can dispatch directly via <a href="' + mailtoUrl + '" style="color:#632024;text-decoration:underline">Default Email App</a> or <a href="' + gmailUrl + '" target="_blank" rel="noopener" style="color:#632024;text-decoration:underline">Open in Gmail ↗</a>');
         const win = window.open(gmailUrl, '_blank');
         if (!win) {
           location.href = mailtoUrl;
@@ -1205,14 +1209,14 @@
     /* SSTV opening */
     const W = 320, H = 240, cx = $('#sstv').getContext('2d'), oc = document.createElement('canvas'); oc.width = W; oc.height = H; const o = oc.getContext('2d');
     (function () {
-      const g = o.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#1E1347'); g.addColorStop(.45, '#7B4FC0'); g.addColorStop(.78, '#FF6FAE'); g.addColorStop(1, '#FFC49B'); o.fillStyle = g; o.fillRect(0, 0, W, H);
-      for (let y = 0; y < H; y += 2)for (let x = y % 4 ? 1 : 0; x < W; x += 4)if (Math.random() < .08) { o.fillStyle = 'rgba(255,255,255,.25)'; o.fillRect(x, y, 1, 1) }
-      o.fillStyle = '#FFE3C2'; o.beginPath(); o.arc(262, 196, 24, 0, 7); o.fill(); o.fillStyle = '#2A1459'; o.fillRect(0, 214, W, 14);
-      const S = D.tl.map(t => [t[3] * .3, t[4] * .27 + 48]); o.strokeStyle = '#FFD6F0'; o.lineWidth = 1; o.beginPath();[0, 1, 2, 3, 4].forEach((i, k) => k ? o.lineTo(S[i][0], S[i][1]) : o.moveTo(S[i][0], S[i][1])); o.stroke();
-      S.forEach((s, i) => { o.fillStyle = i == 1 ? '#FFC49B' : '#fff'; o.fillRect(s[0] - 2, s[1] - 2, i == 1 ? 5 : 4, i == 1 ? 5 : 4) });
-      o.fillStyle = '#fff'; o.font = 'bold 24px monospace'; o.fillText('AARYA GOJARE', 12, 28); o.fillStyle = '#FFC2E2'; o.font = '9px monospace'; o.fillText('SATELLITE FIRMWARE · EMBEDDED · AI FOR SPACE', 12, 40);
-      o.fillStyle = '#FFE3F4'; o.fillText('OrbitRadio · BeliefSat-0.1 · SomaiyaSat · Aditya-L1', 12, 224);
-      o.fillStyle = '#000'; o.fillRect(0, 228, W, 12); o.fillStyle = '#fff'; const d = new Date(); o.fillText('RX-SSTV | Robot 36 | ' + d.toISOString().slice(0, 10) + ' ' + d.toTimeString().slice(0, 8), 3, 237)
+      const g = o.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#25344F'); g.addColorStop(.45, '#617891'); g.addColorStop(.78, '#632024'); g.addColorStop(1, '#D5B893'); o.fillStyle = g; o.fillRect(0, 0, W, H);
+      for (let y = 0; y < H; y += 2)for (let x = y % 4 ? 1 : 0; x < W; x += 4)if (Math.random() < .08) { o.fillStyle = 'rgba(250,245,235,.25)'; o.fillRect(x, y, 1, 1) }
+      o.fillStyle = '#D5B893'; o.beginPath(); o.arc(262, 196, 24, 0, 7); o.fill(); o.fillStyle = '#6F4D38'; o.fillRect(0, 214, W, 14);
+      const S = D.tl.map(t => [t[3] * .3, t[4] * .27 + 48]); o.strokeStyle = '#F1E9DA'; o.lineWidth = 1; o.beginPath();[0, 1, 2, 3, 4].forEach((i, k) => k ? o.lineTo(S[i][0], S[i][1]) : o.moveTo(S[i][0], S[i][1])); o.stroke();
+      S.forEach((s, i) => { o.fillStyle = i == 1 ? '#D5B893' : '#FAF5EB'; o.fillRect(s[0] - 2, s[1] - 2, i == 1 ? 5 : 4, i == 1 ? 5 : 4) });
+      o.fillStyle = '#FAF5EB'; o.font = 'bold 24px monospace'; o.fillText('AARYA GOJARE', 12, 28); o.fillStyle = '#D5B893'; o.font = '9px monospace'; o.fillText('SATELLITE FIRMWARE · EMBEDDED · AI FOR SPACE', 12, 40);
+      o.fillStyle = '#F1E9DA'; o.fillText('OrbitRadio · BeliefSat-0.1 · SomaiyaSat · Aditya-L1', 12, 224);
+      o.fillStyle = '#000'; o.fillRect(0, 228, W, 12); o.fillStyle = '#FAF5EB'; const d = new Date(); o.fillText('RX-SSTV | Robot 36 | ' + d.toISOString().slice(0, 10) + ' ' + d.toTimeString().slice(0, 8), 3, 237)
     })();
     const src = o.getImageData(0, 0, W, H), sd = src.data, od = cx.createImageData(W, H), out = od.data;
     let done = 0;
@@ -1261,7 +1265,7 @@
       const r = Math.min(H, (((t - t0) / decodeDuration) * H) | 0);
       for (; dn < r; dn++)ln(dn);
       cx.putImageData(od, 0, 0);
-      cx.fillStyle = '#fff';
+      cx.fillStyle = '#FAF5EB';
       cx.fillRect(0, r, W, 1);
       $('#pg').textContent = 'RECEIVING… ' + Math.round(r / H * 100) + '%';
       if (r < H) requestAnimationFrame(fr);
@@ -1269,7 +1273,7 @@
     })(t0);
     setTimeout(() => go(), 10000);
 
-    /* Celestial Star & Glitter Trail (Pink, Purple, White) */
+    /* Cursor trail */
     (function () {
       const canvas = document.createElement('canvas');
       canvas.id = 'cursor-trail-canvas';
@@ -1296,72 +1300,35 @@
       resize();
       window.addEventListener('resize', resize, { passive: true });
 
-      const colors = [
-        '#FFFFFF', '#FFF3FA', // White
-        '#FF6FAE', '#FF2A85', '#FF80BF', '#FFA3D2', // Pink
-        '#9B5DE5', '#7B4FC0', '#B57EDC', '#C084FC'  // Purple
-      ];
+      const colors = ['#632024', '#25344F', '#617891', '#D5B893', '#6F4D38', '#FFFFFF'];
 
       const particles = [];
       let lastX = -100, lastY = -100, animId = null;
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       function spawnParticle(x, y, isBurst) {
         const angle = Math.random() * Math.PI * 2;
         const speed = isBurst ? (Math.random() * 3.5 + 1.2) : (Math.random() * 1.5 + 0.3);
-        const types = ['star4', 'star5', 'glitter', 'sparkle'];
+        const types = ['star4', 'star5', 'plus', 'dot'];
         particles.push({
           x: x + (Math.random() - 0.5) * 6,
           y: y + (Math.random() - 0.5) * 6,
           vx: Math.cos(angle) * speed,
           vy: Math.sin(angle) * speed + (isBurst ? 0.2 : 0.55),
-          size: isBurst ? (Math.random() * 6 + 3) : (Math.random() * 4.5 + 2),
+          size: isBurst ? (Math.random() * 5 + 3) : (Math.random() * 3 + 2),
           type: types[Math.floor(Math.random() * types.length)],
           color: colors[Math.floor(Math.random() * colors.length)],
           rotation: Math.random() * Math.PI * 2,
           vRot: (Math.random() - 0.5) * 0.18,
           life: 1.0,
-          decay: isBurst ? (Math.random() * 0.02 + 0.015) : (Math.random() * 0.028 + 0.018)
+          decay: isBurst ? (Math.random() * 0.02 + 0.025) : (Math.random() * 0.02 + 0.03)
         });
       }
 
-      function drawStar4(c, sz) {
-        c.beginPath();
-        c.moveTo(0, -sz);
-        c.quadraticCurveTo(0, 0, sz, 0);
-        c.quadraticCurveTo(0, 0, 0, sz);
-        c.quadraticCurveTo(0, 0, -sz, 0);
-        c.quadraticCurveTo(0, 0, 0, -sz);
-        c.closePath();
-        c.fill();
-      }
-
-      function drawStar5(c, sz) {
-        c.beginPath();
-        for (let i = 0; i < 5; i++) {
-          c.lineTo(Math.cos((18 + i * 72) * Math.PI / 180) * sz, -Math.sin((18 + i * 72) * Math.PI / 180) * sz);
-          c.lineTo(Math.cos((54 + i * 72) * Math.PI / 180) * (sz * 0.45), -Math.sin((54 + i * 72) * Math.PI / 180) * (sz * 0.45));
-        }
-        c.closePath();
-        c.fill();
-      }
-
-      function drawGlitter(c, sz) {
-        c.beginPath();
-        c.arc(0, 0, sz * 0.45, 0, Math.PI * 2);
-        c.fill();
-        c.beginPath();
-        c.moveTo(-sz * 0.9, 0); c.lineTo(sz * 0.9, 0);
-        c.moveTo(0, -sz * 0.9); c.lineTo(0, sz * 0.9);
-        c.lineWidth = Math.max(1, sz * 0.25);
-        c.strokeStyle = c.fillStyle;
-        c.stroke();
-      }
-
-      function drawSparkle(c, sz) {
-        c.beginPath();
-        c.arc(0, 0, sz * 0.4, 0, Math.PI * 2);
-        c.fill();
-      }
+      function drawStar4(c, s) { c.beginPath(); c.moveTo(0, -s); c.lineTo(s * .25, -s * .25); c.lineTo(s, 0); c.lineTo(s * .25, s * .25); c.lineTo(0, s); c.lineTo(-s * .25, s * .25); c.lineTo(-s, 0); c.lineTo(-s * .25, -s * .25); c.closePath(); c.fill(); }
+      function drawStar5(c, s) { c.beginPath(); for (let i = 0; i < 10; i++) { const r = i % 2 ? s * .45 : s, a = -Math.PI / 2 + i * Math.PI / 5; i ? c.lineTo(Math.cos(a) * r, Math.sin(a) * r) : c.moveTo(Math.cos(a) * r, Math.sin(a) * r); } c.closePath(); c.fill(); }
+      function drawPlus(c, s) { const w = Math.max(1, s * .28); c.fillRect(-s, -w / 2, s * 2, w); c.fillRect(-w / 2, -s, w, s * 2); }
+      function drawDot(c, s) { c.beginPath(); c.arc(0, 0, s * .4, 0, Math.PI * 2); c.fill(); }
 
       function loop() {
         ctx.clearRect(0, 0, w, h);
@@ -1378,16 +1345,16 @@
           ctx.save();
           ctx.translate(p.x, p.y);
           ctx.rotate(p.rotation);
-          const twinkle = 0.8 + 0.2 * Math.sin(p.life * 14);
-          ctx.globalAlpha = Math.max(0, Math.min(1, p.life * twinkle));
+          ctx.globalAlpha = p.life;
           ctx.fillStyle = p.color;
           ctx.shadowColor = p.color;
-          ctx.shadowBlur = 3;
+          ctx.shadowBlur = 0;
+          ctx.lineWidth = 1;
           const curSize = p.size * (0.35 + 0.65 * p.life);
           if (p.type === 'star4') drawStar4(ctx, curSize);
           else if (p.type === 'star5') drawStar5(ctx, curSize);
-          else if (p.type === 'glitter') drawGlitter(ctx, curSize);
-          else drawSparkle(ctx, curSize);
+          else if (p.type === 'plus') drawPlus(ctx, curSize);
+          else drawDot(ctx, curSize);
           ctx.restore();
         }
         if (particles.length > 0) {
@@ -1402,6 +1369,7 @@
       }
 
       window.addEventListener('mousemove', e => {
+        if (reduced) return;
         const dist = Math.hypot(e.clientX - lastX, e.clientY - lastY);
         if (dist > 5) {
           const count = Math.min(3, Math.floor(dist / 8) + 1);
@@ -1415,6 +1383,7 @@
       }, { passive: true });
 
       window.addEventListener('click', e => {
+        if (reduced) return;
         for (let i = 0; i < 14; i++) {
           spawnParticle(e.clientX, e.clientY, true);
         }
@@ -1422,6 +1391,7 @@
       }, { passive: true });
 
       window.addEventListener('touchmove', e => {
+        if (reduced) return;
         if (e.touches && e.touches[0]) {
           const t = e.touches[0];
           const dist = Math.hypot(t.clientX - lastX, t.clientY - lastY);
